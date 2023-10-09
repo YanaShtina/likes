@@ -1,0 +1,100 @@
+.rocket {
+  padding: rem(215px) 0;
+  background-image: url('../../img/rocket-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+
+  .container {
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(310px);
+    height: rem(600px);
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+ 
+    &-inner {
+      max-width: rem(736px);
+      text-align: center;
+      margin-bottom: rem(50px);
+
+
+      .font-60 {
+        color: #fff;
+        line-height: 130%;
+      }
+
+      .animated {
+        padding: rem(8px) rem(21px);
+        background-color: #F9BB19;
+        color: #202020;
+      }
+
+      .centred {
+        display: block;
+        margin: 0 auto;
+        width: max-content;
+      }
+    }
+  }
+
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: rem(580px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: rem(190px);
+    height: rem(190px);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.10);
+    margin-right: 2px;
+    margin-bottom: 2px;
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      background-image: url('../../img/rocket-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      top: rem(12px);
+      right: rem(12px);
+      width: rem(33px);
+      height: rem(33px);
+      opacity: 0;
+    }
+
+    .icon {
+      width: rem(38px);
+      height: rem(38px);
+      background-image: url('../../img/rocket-icon-1.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-bottom: rem(14px);
+    }
+
+    .text {
+      font-family: $p-font-SF-medium;
+      font-size: rem(26px);
+    }
+  }
+}

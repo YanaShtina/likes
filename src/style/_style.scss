@@ -168,7 +168,7 @@ body {
 
   &:hover {
     cursor: pointer;
-    background: $p-text;
+    background: linear-gradient(95deg,  #009A7E 0%, #71CA00 100%);
     transition: all 0.3s ease-in;
   }
 
