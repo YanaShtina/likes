@@ -99,7 +99,11 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 rem(32px)
+  padding: 0 rem(32px);
+
+  @include mobile {
+    padding: 0 rem(16px);
+  }
 
 }
 
@@ -180,9 +184,15 @@ body {
       background-image: url('../img/rocket-btn.svg');
       background-size: contain;
       background-repeat: no-repeat;
-      margin-right: rem(12px);
+      margin-right: 12px;
       width: 14px;
       height: 14px;
+      flex-shrink: 0;
+
+      @include mobile {
+        margin-right: 10px;
+      }
+      
 
     }
   }
@@ -271,11 +281,19 @@ body {
 .font-60 {
   font-family:$p-font-black;
   font-size: rem(60px);
+
+  @include mobile {
+    font-size: rem(36px);
+  }
 }
 
 .font-32-sf {
   font-family:$p-font-SF-bold;
   font-size: rem(32px);
+
+  @include mobile {
+    font-size: rem(18px);
+  }
 }
 .font-32-g {
   font-family:$p-font-SF-black;
