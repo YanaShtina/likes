@@ -28,29 +28,8 @@
   }
 }
 
-@mixin low-desktop {
-  @media screen and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
 
-@mixin low-desktop-only {
-  @media screen and (min-width: #{$low-desktop-width}) and (max-width: #{$desktop-width - 1px}) {
-    @content;
-  }
-}
 
-@mixin low-desktop-min {
-  @media screen and (min-width: #{$low-desktop-width}) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media screen and (max-width: #{$low-desktop-width - 1px}) {
-    @content;
-  }
-}
 
 
 @mixin tablet-min {

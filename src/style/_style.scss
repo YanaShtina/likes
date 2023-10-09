@@ -5,7 +5,6 @@
 
 $root-font-size: 100;
 /* $wide-desktop-width: 1920px; */
-$low-desktop-width: 900px;
 $desktop-width: 1280px;
 $tablet-width: 768px;
 $mobile-width: 375px;
@@ -14,24 +13,13 @@ html {
   --root-font-size: #{$root-font-size}px;
   font-size: #{$root-font-size}px;
 
-  @include low-desktop {
-    $min-screen-width: 500;
-    $mid-screen-width: 1915;
+  //Равномерный скейл по ширине (скейл вниз):
+$min-screen-width: 768;
+$mid-screen-width: 1280;
 
-    @include css-lock(#{$min-screen-width * calc($root-font-size / $mid-screen-width)}, $root-font-size, $min-screen-width, $mid-screen-width);
-  }
+@include css-lock(#{calc($min-screen-width * 100 / $mid-screen-width)}, 100, $min-screen-width, $mid-screen-width);
 
 
-  @include tablet {
-    $mid-screen-width: 768;
-    $max-screen-width: 1023;
-
-    @include css-lock(
-      $root-font-size, #{$root-font-size * calc($max-screen-width / $mid-screen-width)},
-      $mid-screen-width,
-      $max-screen-width
-    );
-  }
 
   @include mobile {
     $min-screen-width: 375;
@@ -81,6 +69,7 @@ body {
   height: 100%;
   max-width: rem(1920px);
   margin: 0 auto;
+  background-color: #F5F5FC;
 
  
 
@@ -108,9 +97,9 @@ body {
 }
 
 .container {
-/*   max-width: rem(1280px); */
-width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 0 rem(32px)
 
 }
 
@@ -289,13 +278,73 @@ width: 100%;
   font-size: rem(32px);
 }
 .font-32-g {
-  font-family:$p-font-SF-bold;
+  font-family:$p-font-SF-black;
   font-size: rem(32px);
 }
 
 .font-24-st-reg{
   font-family:$p-font-SF-regular;
   font-size: rem(24px);
+}
+
+
+.social__list {
+display: flex;
+}
+
+.social__item {
+  margin-right: rem(15px);
+  width: rem(37px);
+  height: rem(37px);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &._i {
+    background-image: url('../img/instagram.svg');
+  }
+
+  &._y {
+    background-image: url('../img/youtube.svg');
+  }
+
+  &._t {
+    background-image: url('../img/tiktok.svg');
+  }
+
+  &._h {
+    background-image: url('../img/hz.svg');
+  }
+  &._p {
+    background-image: url('../img/pinterest.svg');
+  }
+
+  &._s {
+    background-image: url('../img/snapchat.svg');
+  }
+
+  &._l {
+    background-image: url('../img/linkedin.svg');
+  }
+}
+.link-apple,
+.link-google {
+  width: rem(120px);
+  height: rem(40px);
+  background-size: contain;
+
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.link-apple {
+  background-image: url('../img/AppStore.svg');
+  margin-right: rem(10px);
+}
+
+.link-google {
+  background-image: url('../img/google.svg');
+  width: rem(135px);
 }
 
 
