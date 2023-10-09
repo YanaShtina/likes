@@ -1,0 +1,31 @@
+.hero {
+  margin-top: rem(50px);
+
+  &__wrap {
+    display: flex;
+  }
+
+  &__left {
+    flex-shrink: 0;
+  }
+
+  &__right {
+    position: relative;
+
+
+    div {
+      position: absolute;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    ._bg-main {
+      width: rem(645px);
+      height: rem(520px);
+    }
+  }
+}

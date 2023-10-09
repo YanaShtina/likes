@@ -6,7 +6,7 @@
 $root-font-size: 100;
 /* $wide-desktop-width: 1920px; */
 $low-desktop-width: 900px;
-$desktop-width: 1920px;
+$desktop-width: 1280px;
 $tablet-width: 768px;
 $mobile-width: 375px;
 
@@ -108,7 +108,8 @@ body {
 }
 
 .container {
-  max-width: rem(1280px);
+/*   max-width: rem(1280px); */
+width: 100%;
   margin: 0 auto;
 
 }
@@ -168,28 +169,45 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: rem(24px);
-  height: rem(48px);
-  font-size: rem(16px);
-  line-height: rem(22px);
-  font-family: $p-font-medium;
-  width: rem(192px);
+  border-radius: 49px;
+  height: 36px;
+  font-size: 16px;
+  font-family:$p-font-SF-bold;
+  width: 155px;
   transition: all 0.3s ease-in;
-
-
-  @include mobile {
-    width: rem(158px);
-    height: rem(36px);
-    font-size: rem(14px);
-    line-height: rem(20px);
-  }
-
+  color: #fff;
 
   &:hover {
     cursor: pointer;
     background: $p-text;
     transition: all 0.3s ease-in;
   }
+
+  &__green {
+    background: linear-gradient(95deg, #71CA00 0%, #009A7E 100%);
+    font-size: 13px;
+    
+    span {
+      background-image: url('../img/rocket-btn.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: rem(12px);
+      width: 14px;
+      height: 14px;
+
+    }
+  }
+
+
+/*   @include mobile {
+    width: rem(158px);
+    height: rem(36px);
+    font-size: rem(14px);
+    line-height: rem(20px);
+  } */
+
+
+
 }
 
 
@@ -259,6 +277,25 @@ body {
   @include mobile {
     display: none;
   }
+}
+
+.font-60 {
+  font-family:$p-font-black;
+  font-size: rem(60px);
+}
+
+.font-32-sf {
+  font-family:$p-font-SF-bold;
+  font-size: rem(32px);
+}
+.font-32-g {
+  font-family:$p-font-SF-bold;
+  font-size: rem(32px);
+}
+
+.font-24-st-reg{
+  font-family:$p-font-SF-regular;
+  font-size: rem(24px);
 }
 
 
