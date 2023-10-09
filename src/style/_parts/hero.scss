@@ -127,5 +127,61 @@
       bottom: rem(70px);
       right:rem(180px);
     }
+
+    ._left-1 {
+      width: rem(75px);
+      height: rem(65px);
+      top: rem(20px);
+      left: rem(200px);
+    }
+
+    ._left-2 {
+      width: rem(120px);
+      height: rem(100px);
+      top: rem(150px);
+      left: rem(115px);
+    }
+
+    ._left-3 {
+      width: rem(160px);
+      height: rem(160px);
+      bottom: rem(40px);
+      left: rem(90px);
+    }
+
+    ._left-4 {
+      width: rem(130px);
+      height: rem(130px);
+      bottom: rem(90px);
+      left: rem(250px);
+    }
+
+    ._right-1 {
+      width: rem(110px);
+      height: rem(110px);
+      top: rem(-50px);
+      right: rem(115px);
+    }
+
+    ._right-2 {
+      width: rem(73px);
+      height: rem(62px);
+      right: rem(65px);
+      top: rem(80px);
+    }
+
+    ._right-3 {
+      width: rem(176px);
+      height: rem(160px);
+      right: rem(-90px);
+      top: rem(160px);
+    }
+
+    ._right-4 {
+      width: rem(170px);
+      height: rem(170px);
+      right: rem(110px);
+      bottom: rem(10px);
+    }
   }
 }
