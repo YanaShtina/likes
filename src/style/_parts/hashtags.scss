@@ -3,6 +3,7 @@
   background-image: url('../../img/hash-bottom.svg');
   background-position: bottom;
   background-repeat: no-repeat;
+  background-color: #F5F5FC;
   
 
   .container {
@@ -83,6 +84,23 @@
     @include mobile {
       width: 100%;
       height: rem(400px);
+
+      position: absolute;
+      top: 0;
+
+      &._1 {
+        top: 0;
+      }
+
+      &._2 {
+        top: rem(600px);
+        z-index: 5;
+      }
+
+      &._3 {
+        top: rem(800px);
+        z-index: 10;
+      }
     }
   }
 
@@ -104,4 +122,10 @@
    display: none;
     }
   }
+}
+
+.ee {
+  height: 400px;
+  background-color: lightcoral;
+  margin-top: rem(200px);
 }

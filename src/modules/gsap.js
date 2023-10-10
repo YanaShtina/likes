@@ -395,6 +395,7 @@ export default {
       console.log('desk')
     } else if (mql.matches == true) {
       const section = document.querySelector('.hashtags');
+      const title = document.querySelector('.hashtags__list');
       const card2 = document.querySelector('.hashtags__item._2');
       const card3 = document.querySelector('.hashtags__item._3');
 
@@ -403,22 +404,24 @@ export default {
       const tl = gsap.timeline();
 
       tl.to(card2, {
-        y:-400,
-      }).to(card3, {
-        y:-800,
+        top: 0,
+        duration:3,
       })
+      .to(card3, {
+        top: 0,
+        duration:3,
+      }) 
      
       
 
       ScrollTrigger.create({
         trigger: section,
         start: '-50px',
-        end: '100%',
+        end: '2000 top',
         animation: tl,
         markers: true,
         pin: true,
         scrub: true,
-
       });
     }
   }
