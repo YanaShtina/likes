@@ -226,37 +226,43 @@ export default {
     },)
 
     //список
-    const list = document.querySelectorAll('.rocket__item');
-    console.log('list', list)
 
-    list.forEach((element) => {
-      console.log(element);
+    if (window.innerWidth >= 768) {
+      const tl = gsap.timeline({
+        repeat: -1, // Repeat the animation infinitely
+      });
+      
+      tl.to(".rocket__item._1 .icon, .rocket__item._1 .text", { scale: 1.2 })
+        .to(".rocket__item._1 .arrow", { opacity: 1 })
+        .to(".rocket__item._1 .icon, .rocket__item._1 .text", { scale: 1 })
+        .to(".rocket__item._1 .arrow", { opacity: 0 });
 
-      const arrow = element.querySelector('.arrow')
+        tl.to(".rocket__item._2 .icon, .rocket__item._2 .text", { scale: 1.2 })
+        .to(".rocket__item._2 .arrow", { opacity: 1 })
+        .to(".rocket__item._2 .icon, .rocket__item._2 .text", { scale: 1 })
+        .to(".rocket__item._2 .arrow", { opacity: 0 });
 
-      const tlchangeSize = gsap.timeline({
-        repeat: -1,
-      }); 
+        tl.to(".rocket__item._3 .icon, .rocket__item._3 .text", { scale: 1.2 })
+        .to(".rocket__item._3 .arrow", { opacity: 1 })
+        .to(".rocket__item._3 .icon, .rocket__item._3 .text", { scale: 1 })
+        .to(".rocket__item._3 .arrow", { opacity: 0 });
 
-      tlchangeSize
-      .to(arrow, {
-        opacity:1,
-        duration: 3,
-    },)
-    });
 
-/*     list.forEach(item, ()=> {
-      console.log('i', item)
-      const tlchangeSize = gsap.timeline({
-        repeat: -1,
-      }); */
-/* 
-      tlchangeSize
-      .to(i, {
-        color:'#ffffff',
-        backgroundColor: '#FC0091',
-        duration: 3,
-    },) */
+        tl.to(".rocket__item._4 .icon, .rocket__item._4 .text", { scale: 1.2 })
+        .to(".rocket__item._4 .arrow", { opacity: 1 })
+        .to(".rocket__item._4 .icon, .rocket__item._4 .text", { scale: 1 })
+        .to(".rocket__item._4 .arrow", { opacity: 0 });
+
+
+        tl.to(".rocket__item._5 .icon, .rocket__item._5 .text", { scale: 1.2 })
+        .to(".rocket__item._5 .arrow", { opacity: 1 })
+        .to(".rocket__item._5 .icon, .rocket__item._5 .text", { scale: 1 })
+        .to(".rocket__item._5 .arrow", { opacity: 0 });
+    }
+
+
+    // Repeat the above pattern for each rocket__item with the corresponding class
+    
 
 
   }
