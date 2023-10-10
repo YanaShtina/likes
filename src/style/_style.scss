@@ -22,8 +22,8 @@ $mid-screen-width: 1280;
 
 
   @include mobile {
-    $min-screen-width: 375;
-    $mid-screen-width: 420;
+    $min-screen-width: 345;
+    $mid-screen-width:375;
     $max-screen-width: 760;
 
     @include css-lock-full(#{calc($min-screen-width * $root-font-size / $mid-screen-width)}, $root-font-size, #{calc($max-screen-width * $root-font-size / $mid-screen-width)}, $min-screen-width, $mid-screen-width, $max-screen-width);
@@ -70,6 +70,7 @@ body {
   max-width: rem(1920px);
   margin: 0 auto;
   background-color: #F5F5FC;
+  overflow-x: hidden;
 
  
 
@@ -102,7 +103,7 @@ body {
   padding: 0 rem(32px);
 
   @include mobile {
-    padding: 0 rem(16px);
+    padding: 0 rem(14px);
   }
 
 }

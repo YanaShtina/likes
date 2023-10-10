@@ -1,8 +1,14 @@
 .rocket {
   padding: rem(215px) 0;
-  background-image: url('../../img/rocket-bg.png');
+  background-image: url('../../img/rocket-bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
+
+
+  @include mobile {
+    background-image: url('../../img/rocket-bg-mob.svg');
+    padding: rem(65px) 0;
+  }
  
 
   .container {
@@ -21,6 +27,12 @@
       width: 100%;
       object-fit: contain;
     }
+
+    @include mobile {
+      width: rem(140px);
+      height: rem(280px);
+      top:rem(85px);
+    }
   }
 
   &__info {
@@ -30,16 +42,29 @@
       text-align: center;
       margin-bottom: rem(50px);
 
+      @include mobile {
+        margin-bottom: rem(25px);
+        max-width: 100%;
+      }
+
 
       .font-60 {
         color: #fff;
         line-height: 130%;
+
+        @include mobile {
+          font-size: rem(20px);
+        }
       }
 
       .animated {
         padding: rem(8px) rem(21px);
         background-color: #F9BB19;
         color: #202020;
+
+        @include mobile {
+          padding: rem(4px) rem(8px);
+        }
       }
 
       .centred {
@@ -56,6 +81,16 @@
     justify-content: center;
     flex-wrap: wrap;
     max-width: rem(580px);
+
+    @include mobile {
+      max-width: rem(350px);
+      background-image: url('../../img/rocket-bg-list-mob.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: rem(54px) rem(40px);
+    }
   }
 
   &__item {
@@ -71,6 +106,16 @@
     margin-bottom: 2px;
     position: relative;
 
+    @include mobile {
+      width: max-content;
+      height: max-content;
+      margin-right: 0;
+      margin-bottom: rem(4px);
+      background: none;
+      justify-content: flex-start;
+      flex-direction: row;
+    }
+
     .arrow {
       position: absolute;
       background-image: url('../../img/rocket-arrow.svg');
@@ -81,6 +126,10 @@
       width: rem(33px);
       height: rem(33px);
       opacity: 0;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     .icon {
@@ -90,11 +139,22 @@
       background-repeat: no-repeat;
       background-size: contain;
       margin-bottom: rem(14px);
+
+      @include mobile {
+        width: rem(24px);
+        height: rem(24px);
+        margin-bottom: 0;
+        margin-right: rem(12px);
+      }
     }
 
     .text {
       font-family: $p-font-SF-medium;
       font-size: rem(26px);
+
+      @include mobile {
+        font-size: rem(23px);
+      }
     }
   }
 }

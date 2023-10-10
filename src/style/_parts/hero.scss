@@ -1,12 +1,17 @@
 .hero {
   margin-top: rem(95px);
 
+  @include mobile {
+    overflow-x: hidden;
+  }
+
 
   &__wrap {
     display: flex;
 
     @include mobile {
       flex-direction: column;
+      position: relative;
     }
   }
 
@@ -131,8 +136,9 @@
       position: absolute;
       width: rem(375px);
       height: rem(400px);
-      bottom: rem(300px);
+      bottom: rem(400px);
       width: 100%;
+      right: 0;
     }
 
 
@@ -153,9 +159,9 @@
       bottom: rem(0);
 
       @include mobile {
-        width: 100%;
-        height: rem(292px);
-        right: 0;
+        width: 110%;
+        height: rem(300px);
+        right: rem(-10px);
         top: rem(270px);
         bottom: initial;
       }
@@ -169,10 +175,10 @@
 
 
       @include mobile {
-        width: 100%;
+        width: 125%;
         height: rem(325px);
-        right: rem(0px);
-        top: rem(250px);
+        right: rem(-30px);
+        top: rem(260px);
         bottom: initial;
       }
     }
@@ -186,8 +192,8 @@
       @include mobile {
         width: rem(156px);
         height: rem(323px);
-        bottom: rem(-92px);
-        right:rem(140px);
+        bottom: rem(-115px);
+        right:rem(100px);
       }
     }
 

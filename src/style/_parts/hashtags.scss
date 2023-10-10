@@ -12,6 +12,10 @@
   &__title {
     text-align: center;
     margin-bottom: rem(8px);
+
+    @include mobile {
+      font-size: rem(32px);
+    }
   }
 
   &__subtitle {
@@ -26,6 +30,13 @@
     .bold {
       font-family: $p-font-SF-bold;
     }
+
+    @include mobile {
+      font-size: rem(23px);
+      width: rem(260px);
+      padding: 0 rem(12px);
+      margin-bottom: rem(40px);
+    }
   }
 
   &__list {
@@ -34,12 +45,22 @@
     position: relative;
     z-index: 2;
 
+    @include mobile {
+      flex-direction: column;
+        width: 100%;
+
+    }
+
     .hashtags__decor {
       position: absolute;
       width: rem(209px);
       height: rem(209px);
       right: rem(-20px);
       top: rem(20px);
+
+      @include mobile {
+        display: none;
+         }
 
 
     img {
@@ -58,6 +79,11 @@
       width: 100%;
       object-fit: cover;
     }
+
+    @include mobile {
+      width: 100%;
+      height: rem(400px);
+    }
   }
 
   &__zuc {
@@ -72,6 +98,10 @@
       width: 100%;
       object-fit: cover;
       height: 100%;
+    }
+
+    @include mobile {
+   display: none;
     }
   }
 }
