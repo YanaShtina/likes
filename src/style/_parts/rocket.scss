@@ -18,7 +18,7 @@
   &__img {
     position: absolute;
     top: 0;
-    right: 0;
+    right: rem(130px);
     width: rem(310px);
     height: rem(600px);
 
@@ -32,6 +32,7 @@
       width: rem(140px);
       height: rem(280px);
       top:rem(85px);
+      right: 0;
     }
   }
 
