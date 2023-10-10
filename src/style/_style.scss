@@ -6,7 +6,7 @@
 $root-font-size: 100;
 /* $wide-desktop-width: 1920px; */
 $desktop-width: 1280px;
-$tablet-width: 768px;
+$tablet-width: 700px;
 $mobile-width: 375px;
 
 html {
@@ -14,7 +14,7 @@ html {
   font-size: #{$root-font-size}px;
 
   //Равномерный скейл по ширине (скейл вниз):
-$min-screen-width: 768;
+$min-screen-width: 700;
 $mid-screen-width: 1280;
 
 @include css-lock(#{calc($min-screen-width * 100 / $mid-screen-width)}, 100, $min-screen-width, $mid-screen-width);
@@ -24,7 +24,7 @@ $mid-screen-width: 1280;
   @include mobile {
     $min-screen-width: 345;
     $mid-screen-width:375;
-    $max-screen-width: 760;
+    $max-screen-width: 700;
 
     @include css-lock-full(#{calc($min-screen-width * $root-font-size / $mid-screen-width)}, $root-font-size, #{calc($max-screen-width * $root-font-size / $mid-screen-width)}, $min-screen-width, $mid-screen-width, $max-screen-width);
   }
@@ -185,13 +185,13 @@ body {
       background-image: url('../img/rocket-btn.svg');
       background-size: contain;
       background-repeat: no-repeat;
-      margin-right: 12px;
+      margin-right: rem(12px);
       width: 14px;
       height: 14px;
       flex-shrink: 0;
 
       @include mobile {
-        margin-right: 10px;
+        margin-right: rem(10px);
       }
       
 

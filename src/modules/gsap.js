@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 gsap.registerPlugin(ScrollTrigger);
 
 export default {
+
   initHero() {
 
     const tlDots = gsap.timeline({
@@ -201,6 +202,9 @@ export default {
   },
 
   initRocket() {
+    // если тру - значит мобилка
+    let mql = window.matchMedia("(max-width: 700px)");
+    console.log('mql', mql.matches)
     const text = gsap.timeline({
       repeat: -1,
     });
@@ -227,7 +231,7 @@ export default {
 
     //список
 
-    if (window.innerWidth >= 768) {
+    if (mql.matches != true) {
       const tl = gsap.timeline({
         repeat: -1, // Repeat the animation infinitely
       });
@@ -258,12 +262,164 @@ export default {
         .to(".rocket__item._5 .arrow", { opacity: 1 })
         .to(".rocket__item._5 .icon, .rocket__item._5 .text", { scale: 1 })
         .to(".rocket__item._5 .arrow", { opacity: 0 });
+    } else if (mql.matches == true) {
+      const tl = gsap.timeline({
+        repeat: -1, // Repeat the animation infinitely
+      });
+      
+      tl
+        .to(".rocket__item._1 .icon, .rocket__item._1 .text", 
+          { opacity: 0 })
+      
+        .to(".rocket__item._1 .icon, .rocket__item._1 .text", { opacity: 1 })
+      
+
+        tl .to(".rocket__item._2 .icon, .rocket__item._2 .text", 
+        { opacity: 0 })
+    
+      .to(".rocket__item._2 .icon, .rocket__item._2 .text", { opacity: 1 })
+
+        tl .to(".rocket__item._3 .icon, .rocket__item._3 .text", 
+        { opacity: 0 })
+    
+      .to(".rocket__item._3 .icon, .rocket__item._3 .text", { opacity: 1 })
+
+
+        tl .to(".rocket__item._4 .icon, .rocket__item._4 .text", 
+        { opacity: 0 })
+    
+      .to(".rocket__item._4 .icon, .rocket__item._4 .text", { opacity: 1 })
+
+
+        tl .to(".rocket__item._5 .icon, .rocket__item._5 .text", 
+        { opacity: 0 })
+    
+      .to(".rocket__item._5 .icon, .rocket__item._5 .text", { opacity: 1 })
     }
 
 
-    // Repeat the above pattern for each rocket__item with the corresponding class
+
+    // ракета
+    const rocket = document.querySelector('.rocket__img');
+
+    const tlRocket = gsap.timeline({
+      repeat: -1, // Repeat the animation infinitely
+    });
+
+    const rainItems = document.querySelectorAll(".rain-item-svg");
+
+
+
+    if (mql.matches != true) {
+      tlRocket
+      .to(rocket, {
+        y: -70,
+        opacity:0.4,
+   
+      })
+      .to(rocket, {
+        opacity:1,
+        y: 0,
+   
+      })
+
+      rainItems.forEach((rainItem, index) => {
+        const tlItem = gsap.timeline({
+          repeat: -1,
+        });
+      
+        tlItem
+          .fromTo(rainItem, {
+            y: -400,
+            ease: "power1.in",
+            duration: 2,
+            delay: index * 0.1,
+          },
+          {
+            y: 700,
+            ease: "power1.in",
+            duration: 2,
+            delay: index * 0.1,
+          })
+     /*      .set(rainItem, { y: "-120%" });
+      
+        tlRain.add(tlItem, 0); // Ensure that each item starts at the same time */
+      });
+    } else if (mql.matches == true) {
+      tlRocket
+      .to(rocket, {
+        y: -20,
+        duration: 2,
+      })
+      .to(rocket, {
+        y: 0,
+        duration: 2,
+      })
+
+      rainItems.forEach((rainItem, index) => {
+        const tlItem = gsap.timeline({
+          repeat: -1,
+        });
+      
+        tlItem
+          .fromTo(rainItem, {
+            y: -300,
+            ease: "power1.in",
+            duration: 2,
+ 
+            delay: index * 0.1,
+          },
+          {
+            y: 400,
+            ease: "power1.in",
+            opacity:1,
+            duration: 2,
+            delay: index * 0.1,
+          })
+     /*      .set(rainItem, { y: "-120%" });
+      
+        tlRain.add(tlItem, 0); // Ensure that each item starts at the same time */
+      });
+    }
+
+
+
     
+  },
 
+  scrollCards() {
+    let mql = window.matchMedia("(max-width: 700px)");
+    console.log('mql', mql.matches);
 
+    if (mql.matches != true) {
+      console.log('desk')
+    } else if (mql.matches == true) {
+      const section = document.querySelector('.hashtags');
+      const card2 = document.querySelector('.hashtags__item._2');
+      const card3 = document.querySelector('.hashtags__item._3');
+
+      console.log('card3', card3)
+
+      const tl = gsap.timeline();
+
+      tl.to(card2, {
+        y:-400,
+      }).to(card3, {
+        y:-800,
+      })
+     
+      
+
+      ScrollTrigger.create({
+        trigger: section,
+        start: '-50px',
+        end: '100%',
+        animation: tl,
+        markers: true,
+        pin: true,
+        scrub: true,
+
+      });
+    }
   }
 }

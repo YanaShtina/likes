@@ -3,6 +3,7 @@
 
   @include mobile {
     overflow-x: hidden;
+    margin-top: rem(15px);
   }
 
 
@@ -207,7 +208,7 @@
         width: rem(40px);
         height: rem(35px);
         left: rem(56px);
-        top: rem(180px);
+        top: rem(200px);
       }
     }
 
@@ -222,7 +223,7 @@
         width: rem(64px);
         height: rem(54px);
         left: rem(15px);
-        top: rem(280px);
+        top: rem(310px);
       }
     }
 
@@ -233,10 +234,10 @@
       left: rem(90px);
 
       @include mobile {
-        width: rem(100px);
-        height: rem(100px);
-        left: rem(-20px);
-        bottom: rem(-100px);
+        width: rem(80px);
+        height: rem(80px);
+        left: rem(-30px);
+        bottom: rem(-160px);
       }
     }
 
@@ -251,8 +252,8 @@
       @include mobile {
         width: rem(70px);
         height: rem(70px);
-        left: rem(90px);
-        bottom: rem(-50px);
+        left: rem(40px);
+        bottom: rem(-120px);
       }
     }
 
@@ -265,8 +266,8 @@
       @include mobile {
         width: rem(70px);
         height: rem(70px);
-        right: rem(95px);
-        top: rem(150px);
+        right: rem(55px);
+        top: rem(200px);
       }
     }
 
@@ -279,8 +280,8 @@
       @include mobile {
         width: rem(45px);
         height: rem(45px);
-        right: rem(95px);
-        top: rem(250px);
+        right: rem(15px);
+        top: rem(300px);
       }
     }
 
@@ -294,8 +295,8 @@
       @include mobile {
         width: rem(100px);
         height: rem(100px);
-        right: 0;
-        top: rem(320px);
+        right: rem(-30px);
+        top: rem(350px);
       }
     }
 
@@ -308,8 +309,8 @@
       @include mobile {
         width: rem(100px);
         height: rem(100px);
-        bottom: rem(-120px);
-        right: rem(70px);
+        bottom: rem(-150px);
+        right: rem(20px);
       }
     }
   }

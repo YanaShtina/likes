@@ -3,6 +3,7 @@
   background-image: url('../../img/rocket-bg.svg');
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 
 
   @include mobile {
@@ -17,7 +18,7 @@
 
   &__img {
     position: absolute;
-    top: 0;
+    top: rem(150px);
     right: rem(130px);
     width: rem(310px);
     height: rem(600px);
@@ -81,7 +82,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: rem(580px);
+    max-width: rem(590px);
 
     @include mobile {
       max-width: rem(350px);
@@ -155,6 +156,52 @@
 
       @include mobile {
         font-size: rem(23px);
+      }
+    }
+  }
+
+  .rain-wrap {
+    position: absolute;
+    right: rem(20px);
+    top: rem(0);
+
+    @include mobile {
+      // overflow: hidden;
+    }
+  }
+
+  .rain-item {
+    position: absolute;
+    top: 0;
+
+    &._1 {
+      right: rem(300px);
+
+      @include mobile {
+        right: rem(120px);
+      }
+    }
+
+    &._3 {
+      right: rem(100px);
+      @include mobile {
+        right: rem(30px);
+      }
+    }
+
+    &._4 {
+      right: rem(400px);
+
+      @include mobile {
+        right: rem(70px);
+      }
+    }
+
+    &._5 {
+      right: rem(350px);
+
+      @include mobile {
+        right: rem(100px);
       }
     }
   }
