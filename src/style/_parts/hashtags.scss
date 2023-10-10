@@ -4,6 +4,10 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-color: #F5F5FC;
+
+  @include mobile {
+    background-image: none;
+  }
   
 
   .container {
@@ -122,10 +126,4 @@
    display: none;
     }
   }
-}
-
-.ee {
-  height: 400px;
-  background-color: lightcoral;
-  margin-top: rem(200px);
 }

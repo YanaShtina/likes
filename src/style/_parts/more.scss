@@ -1,0 +1,58 @@
+.more {
+  background-color: #fff;
+  background-image: url('../../img/more-bg.svg');
+  background-position: center 65%;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  padding-bottom: rem(250px);
+
+  .container {
+    position: relative;
+  }
+
+
+  @include mobile {
+    margin-top: rem(200px);
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+    color: $p-pink;
+    margin-bottom: rem(170px);
+    width: rem(770px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__svg {
+    max-height: rem(480px);
+    position: absolute;
+    right: rem(0px);
+    top: rem(200px);
+
+    svg {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    max-width: rem(650px);
+    margin-left: rem(150px);
+    font-size: rem(32px);
+    font-family: $p-font-SF-regular;
+
+    ._top {
+      max-width: rem(630px);
+      margin-bottom: rem(16px);
+    }
+
+    ._bottom {
+      font-family: $p-font-SF-black;
+    }
+  }
+}
