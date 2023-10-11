@@ -1,0 +1,48 @@
+.footer {
+  background-color: #202020;
+  padding: rem(24px) 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    color: #fff;
+    margin-bottom: rem(12px);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: rem(24px);
+  }
+
+  &__top-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: rem(120px);
+    &:last-child {
+      margin-right: 0;
+    }
+
+    ._label {
+      font-size: 13px;
+      color: #818196;
+      margin-bottom: rem(8px);
+    }
+
+    ._info {
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+
+  &__bottom {
+    font-size: 13px;
+    color: #818196;
+  }
+}
