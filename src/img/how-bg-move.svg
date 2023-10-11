@@ -1,0 +1,21 @@
+<svg width="1920" height="870" viewBox="0 0 1920 870" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_441_10904)">
+<g style="mix-blend-mode:screen" filter="url(#filter0_f_441_10904)">
+<circle cx="1920" cy="435" r="759" fill="url(#paint0_radial_441_10904)"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_441_10904" x="980" y="-505" width="1880" height="1880" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="90.5" result="effect1_foregroundBlur_441_10904"/>
+</filter>
+<radialGradient id="paint0_radial_441_10904" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1920 435) rotate(90) scale(759)">
+<stop stop-color="#2457A3"/>
+<stop offset="1" stop-color="#8E24A3" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0_441_10904">
+<rect width="1920" height="870" fill="white"/>
+</clipPath>
+</defs>
+</svg>

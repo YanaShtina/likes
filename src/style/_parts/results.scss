@@ -1,0 +1,31 @@
+.results {
+  padding: rem(10px) rem(90px);
+  
+  .container {
+    position: relative;
+  }
+
+  &__title {
+    max-width: rem(640px);
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: rem(45px);
+
+    .pink {
+      background-color: $p-pink;
+      color: #fff;
+      display: inline-block;
+      padding: 0 rem(8px);
+      margin-bottom: rem(4px);
+    }
+
+    .blue {
+      background-color: $p-blue;
+      color: #fff;
+      display: inline-block;
+      padding: 0 rem(8px);
+    }
+  }
+}

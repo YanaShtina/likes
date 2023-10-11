@@ -1,0 +1,128 @@
+.how {
+  background-image: url('../../img/how-bg.svg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding: rem(220px) 0;
+  position: relative;
+
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bg-bottom {
+    position: absolute;
+    width: 100%;
+    height: rem(134px);
+    bottom: 0;
+    background-image: url('../../img/how-bg-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    z-index: 55;
+  }
+
+/*   &__screen {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: rem(-200px);
+  } */
+
+  &__screen-tel {
+    width: rem(300px);
+    height: rem(660px);
+    position: absolute;
+    bottom: rem(-180px);
+    left: rem(520px);
+    z-index: 66;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__screen-anim {
+    width: rem(600px);
+    height: rem(600px);
+    position: absolute;
+    bottom: rem(-330px);
+    left: rem(360px);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__list {
+    max-width: rem(375px);
+    padding-left: rem(20px);
+  }
+
+  &__list-title {
+    color: #fff;
+    margin-bottom: rem(32px);
+  }
+
+  &__list-item {
+    font-family: $p-font-regular;
+    font-size: rem(24px);
+    padding: rem(5px) rem(7px);
+    background-color: #F6BE2C;
+    margin-bottom: rem(8px);
+    position: relative;
+
+    span {
+      position: absolute;
+      color: #fff;
+      left: rem(-40px);
+      top: 0;
+      font-size: rem(36px);
+      font-family: $p-font-black;
+    }
+
+    &._1 {
+      background-color: #d6864a;
+    }
+    &._2 {
+      background-color: #e09841;
+    }
+    &._3 {
+      background-color: #ebac37;
+    }
+  }
+
+  &__more {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__more-title {
+    font-family: $p-font-black;
+    font-size: rem(32px);
+    margin-bottom: rem(16px);
+  }
+
+  &__more-btn {
+    background-color: #FC0091;
+    height: rem(80px);
+    width: rem(335px);
+    font-size: rem(24px);
+    border: 2px solid #fff;
+    margin-bottom: rem(12px);
+  }
+
+  &__more-warning {
+    font-size: rem(18px);
+    color: #d9b1dc;
+  }
+}

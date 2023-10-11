@@ -10,7 +10,7 @@ popup.init();
 burger.init();
 // gsap.initHero();
 // gsap.initRocket();
-gsap.scrollCards();
+// gsap.scrollCards();
 
 
 
