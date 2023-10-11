@@ -412,8 +412,6 @@ export default {
         duration:3,
       }) 
      
-      
-
       ScrollTrigger.create({
         trigger: section,
         start: '-50px',
@@ -424,5 +422,43 @@ export default {
         scrub: true,
       });
     }
+  },
+
+  scrollResults() {
+
+    let mql = window.matchMedia("(max-width: 700px)");
+    console.log('mql', mql.matches);
+
+    if (mql.matches != true) {
+      console.log('desk')
+    } else if (mql.matches == true) {
+      const section = document.querySelector('.results');
+      const scroll1 = document.querySelector('.scroll-1');
+      const scroll2 = document.querySelector('.scroll-2');
+      const scroll3 = document.querySelector('.scroll-3');
+
+
+      const tl = gsap.timeline();
+
+      tl.to(scroll2, {
+        top: 0,
+        duration:3,
+      })
+      .to(scroll3, {
+        top: 0,
+        duration:3,
+      }) 
+     
+      ScrollTrigger.create({
+        trigger: section,
+        start: '-50px',
+        end: '1500 top',
+        animation: tl,
+        markers: true,
+        pin: true,
+        scrub: true,
+      });
+    }
+
   }
 }

@@ -8,6 +8,12 @@
   position: relative;
   z-index: 77;
 
+  @include mobile {
+    padding-top: rem(24px);
+    background-image: none;
+    padding-bottom: rem(50px);
+  }
+
   .container {
     position: relative;
   }
@@ -19,6 +25,13 @@
 
   &__subtitle {
     text-align: center;
+
+    @include mobile {
+      display: inline;
+      font-size: rem(23px);
+      font-family: $p-font-regular;
+    }
+ 
   }
 
   &__title {
@@ -28,6 +41,12 @@
     width: rem(770px);
     margin-left: auto;
     margin-right: auto;
+
+    @include mobile {
+      width: max-content;
+      display: inline;
+      font-size: rem(23px);
+    }
   }
 
   &__svg {
@@ -35,6 +54,12 @@
     position: absolute;
     right: rem(0px);
     top: rem(200px);
+
+    @include mobile {
+      height: rem(170px);
+      left: 0;
+      top: rem(180px);
+    }
 
     svg {
       height: 100%;
@@ -49,13 +74,32 @@
     font-size: rem(32px);
     font-family: $p-font-SF-regular;
 
+    @include mobile {
+      padding: rem(14px) rem(22px);
+      width: calc(rem(347px) - rem(44px));
+      margin-left: 0;
+      background-color: #F6BE2C;
+      border-radius: rem(28px);
+      margin-top: rem(22px);
+    }
+
     ._top {
       max-width: rem(630px);
       margin-bottom: rem(16px);
+
+      @include mobile {
+        font-size: rem(23px);
+        width: 100%;
+        margin-bottom: rem(200px);
+      }
     }
 
     ._bottom {
       font-family: $p-font-SF-black;
+
+      @include mobile {
+        font-size: rem(23px);
+      }
     }
   }
 }

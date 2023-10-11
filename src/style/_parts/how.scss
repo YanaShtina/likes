@@ -5,12 +5,24 @@
   background-size: cover;
   padding: rem(220px) 0;
   position: relative;
+  z-index: 777;
+
+  @include mobile {
+    background-image: url('../../img/how-bg-mob.svg');
+    padding: rem(70px) 0;
+  }
 
   .container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+
+    }
   }
 
   &__bg-bottom {
@@ -23,6 +35,10 @@
     background-position: bottom;
     background-size: cover;
     z-index: 55;
+
+    @include mobile {
+      display: none;
+    }
   }
 
 /*   &__screen {
@@ -40,6 +56,14 @@
     left: rem(520px);
     z-index: 66;
 
+    @include mobile {
+      width: rem(243px);
+      height: rem(490px);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: rem(150px);
+    }
+
     img {
       height: 100%;
       width: 100%;
@@ -54,6 +78,14 @@
     bottom: rem(-330px);
     left: rem(360px);
 
+
+    @include mobile {
+      width: rem(500px);
+      height: rem(500px);
+      left: rem(-70px);
+      bottom: rem(200px);
+    }
+
     svg {
       width: 100%;
       height: 100%;
@@ -64,11 +96,21 @@
   &__list {
     max-width: rem(375px);
     padding-left: rem(20px);
+
+    @include mobile {
+      margin-bottom: rem(560px);
+    }
   }
+
 
   &__list-title {
     color: #fff;
     margin-bottom: rem(32px);
+
+    @include mobile {
+      font-size: rem(32px);
+      text-align: center;
+    }
   }
 
   &__list-item {
@@ -79,6 +121,14 @@
     margin-bottom: rem(8px);
     position: relative;
 
+    @include mobile {
+      font-size: rem(18px);
+      display: inline-block;
+      width: fit-content;
+      padding: rem(3px) rem(4px);
+      line-height: 130%;
+    }
+
     span {
       position: absolute;
       color: #fff;
@@ -86,6 +136,11 @@
       top: 0;
       font-size: rem(36px);
       font-family: $p-font-black;
+
+      @include mobile {
+        font-size: rem(32px);
+        left: rem(-25px);
+      }
     }
 
     &._1 {
@@ -110,6 +165,10 @@
     font-family: $p-font-black;
     font-size: rem(32px);
     margin-bottom: rem(16px);
+
+    @include mobile {
+      font-size: rem(23px);
+    }
   }
 
   &__more-btn {
@@ -119,10 +178,20 @@
     font-size: rem(24px);
     border: 2px solid #fff;
     margin-bottom: rem(12px);
+
+    @include mobile {
+      height: rem(44px);
+      width: rem(226px);
+      font-size: rem(18px);
+    }
   }
 
   &__more-warning {
     font-size: rem(18px);
     color: #d9b1dc;
+
+    @include mobile {
+      font-size: rem(13px);
+    }
   }
 }
