@@ -436,6 +436,8 @@ export default {
       const scroll1 = document.querySelector('.scroll-1');
       const scroll2 = document.querySelector('.scroll-2');
       const scroll3 = document.querySelector('.scroll-3');
+      const scroll4 = document.querySelector('.scroll-4');
+      const scroll5 = document.querySelector('.scroll-5');
 
 
       const tl = gsap.timeline();
@@ -445,6 +447,14 @@ export default {
         duration:3,
       })
       .to(scroll3, {
+        top: 0,
+        duration:3,
+      }) 
+      .to(scroll4, {
+        top: 0,
+        duration:3,
+      }) 
+      .to(scroll5, {
         top: 0,
         duration:3,
       }) 

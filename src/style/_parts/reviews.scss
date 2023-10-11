@@ -1,0 +1,118 @@
+.reviews {
+  padding-top: rem(109px);
+  margin-bottom: rem(40px);
+  position: relative;
+
+  &__title {
+    margin-bottom: rem(63px);
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    .blue {
+      background-color: $p-blue;
+      color: #fff;
+      padding: rem(4px) rem(8px);
+      text-transform: uppercase;
+    }
+  }
+
+  &__slider {
+    height: rem(570px);
+    width: rem(1100px);
+/*     margin-right: 0;
+    margin-left: 0;
+    width: rem(1186px); */
+  }
+
+  .swiper-wrapper {
+/*     width: rem(1186px); */
+  }
+
+  .slider__item {
+    width: rem(170px) !important;
+    height: rem(412px) !important;
+  }
+
+  .slider__item-name {
+    text-align: center;
+    font-size: 18px;
+    font-family: $p-font-SF-bold;
+    margin-bottom: rem(6px);
+  }
+
+  .slider__item-info {
+    color: #818196;
+    font-size: 13px;
+        text-align: center;
+  }
+  .slider__item-video {
+    width: 100%;
+    height: rem(358px) !important;
+    border-radius: rem(23px);
+    border: 5px solid #fff;
+    overflow: hidden;
+    margin-bottom: rem(25px);
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper-slide-active {
+    /* width: rem(230px) !important; */
+    transition: all 0.3s ease-in;
+    width: auto !important;
+/*     margin-left: rem(40px) !important;
+    margin-right: rem(40px) !important; */
+
+    .slider__item-video {
+      height: rem(495px) !important;
+      transition: all 0.3s ease-in;
+     
+    }
+  }
+
+  .swiper-slide-next{
+  /*   margin-right: 30px; */
+    width: rem(197px) !important;
+    height: rem(470px) !important;
+/*     margin-right: rem(70px) !important; */
+
+    .slider__item-video {
+      height: rem(415px) !important;
+    }
+   
+  }
+
+  .swiper-slide-prev {
+/*     margin-right: 30px; */
+    width: rem(197px) !important;
+    height: rem(470px) !important;
+/*     margin-left: rem(70px) !important; */
+
+    .slider__item-video {
+      height: rem(415px) !important;
+    }
+  }
+
+  .swiper-button {
+    width: rem(64px);
+    height: rem(64px);
+    position: absolute;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .swiper-button-next {
+    right: rem(40px);
+  }
+
+  .swiper-button-prev {
+    left: rem(40px);
+  }
+}

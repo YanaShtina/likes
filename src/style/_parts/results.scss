@@ -7,7 +7,7 @@
 
   @include mobile {
     background-image: none;
-    height: rem(800px);
+    height: rem(700px);
   }
   
   .container {
@@ -95,15 +95,15 @@
         z-index: 24;
        }
 
-  /*       &.scroll-4 {
+      &.scroll-4 {
         top: 2000px;
         z-index: 34;
        }
 
-       &.scroll-5 {
-        top: 2500px;
+     &.scroll-5 {
+        top: 2200px;
         z-index: 44;
-       } */
+       } 
     }
 
     &-title {
@@ -131,12 +131,15 @@
       }
     }
 
-    &._2 {
+    &.row_2 {
       height: rem(431px);
       margin-top: rem(84px);
 
       @include mobile {
         margin-top: rem(50px);
+        height: rem(544px);
+        background-color: #fff;
+        border-radius: rem(28px);
       }
     }
 
