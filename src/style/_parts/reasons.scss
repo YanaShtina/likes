@@ -1,1 +1,164 @@
+.reasons {
+  padding-top: rem(150px);
+/*   padding-bottom: rem(133px); */
+  background-image: url('../../img/reason-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  z-index: 55;
 
+  .container {
+
+  }
+
+  &__bg-bottom {
+    width: 100%;
+    height: rem(150px);
+    position: absolute;
+    bottom: rem(-25px);
+    z-index: 5;
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__item {
+    position: absolute;
+    top: 0;
+    font-family: $p-font-SF-bold;
+    font-size: rem(24px);
+    padding: rem(24px);
+    width: max-content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    &._l {
+      background-image: url('../../img/reason-item-bg-left.svg');
+      background-position: bottom right;
+
+      &._1 {
+        top: rem(100px);
+        left: rem(120px);
+      }
+
+      &._2 {
+        top: rem(300px);
+        left: rem(20px);
+      }
+
+      &._3 {
+        top: rem(550px);
+        left: rem(50px);
+      }
+    }
+
+    &._r {
+      background-image: url('../../img/reason-item-bg-rigth.svg');
+      background-position: bottom left;
+      right: 0;
+
+
+      &._1 {
+        top: rem(105px);
+      }
+
+      &._2 {
+        top: rem(300px);
+        right: rem(80px);
+      }
+
+      &._3 {
+        top: rem(500px);
+        right: rem(10px);
+      }
+    }
+
+  }
+
+  &__title {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff;
+    margin-bottom: rem(10px);
+
+    .orange {
+      background-color: #FB5A55;
+      padding: rem(4px) rem(8px);
+    }
+  }
+
+
+  &__img {
+    width: rem( 400px);
+    height: rem(835px);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: relative;
+      z-index: 5;
+    }
+
+    .svg {
+      position: absolute;
+      width: rem(800px);
+      height: rem(800px);
+      top: rem(100px);
+      transform: translateX(-50%);
+      left: 50%;
+
+          svg {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+    }
+  }
+
+  .counter {
+    position: absolute;
+    z-index: 44;
+    background-image: url('../../img/bg_reasons_count.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: rem(90px);
+    height: rem(70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 37%;
+    left: 34%;
+    transform: rotate(25deg);
+
+    .like {
+      width: rem(22px);
+      height: rem(22px);
+      background-image: url('../../img/like.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-right: rem(4px);
+      margin-top: rem(-16px);
+    }
+
+    .number {
+      color: #fff;
+      margin-top: rem(-16px);
+    }
+
+  }
+}

@@ -4,11 +4,13 @@ import popup  from './modules/popup';
 import burger  from './modules/burger';
 import gsap  from './modules/gsap';
 import sliders  from './modules/sliders';
+import counter  from './modules/counter';
 
 
 scroll.scroll();
 popup.init();
 burger.init();
+counter.init();
 // gsap.initHero();
 // gsap.initRocket();
 // gsap.scrollCards();
