@@ -75,6 +75,7 @@
       font-size: 15px;
       margin-right: rem(38px);
       width: max-content;
+      transition: transform 0.3s ease-in;
 
       @include mobile {
         margin-right: rem(0px);
@@ -83,6 +84,8 @@
 
       &:hover {
         cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in;
       }
     }
 

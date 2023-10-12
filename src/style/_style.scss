@@ -193,18 +193,13 @@ body {
       @include mobile {
         margin-right: rem(10px);
       }
-      
+    }
 
+
+    &:hover {
+      background-color: #71CA00;
     }
   }
-
-
-/*   @include mobile {
-    width: rem(158px);
-    height: rem(36px);
-    font-size: rem(14px);
-    line-height: rem(20px);
-  } */
 
 
 

@@ -1,0 +1,256 @@
+.popup__bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(1, 5, 13, 0.7);
+backdrop-filter: blur(7px);
+  opacity: 0; 
+  pointer-events: none; 
+  z-index: 166;
+  // transition: 0.5s all;
+}
+
+.popup__bg.active { 
+  opacity: 1; 
+  pointer-events: all; 
+  z-index: 225;
+  // transition: 0.5s all;
+}
+
+.popup {
+  letter-spacing: -0.02em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: transparent;
+  width: rem(1000px);
+  transition: 0.5s all;
+
+  @include mobile {
+     width: rem(350px);
+     height: 90vh;
+  }
+  
+}
+
+.popup__btn {
+/*   background-color: $p-accent; */
+  align-self: center;
+}
+
+.popup.active { 
+  transform: translate(-50%, -50%) scale(1); 
+  transition: 0.5s all;
+}
+
+.close-popup {
+  position: absolute;
+  top: rem(-50px);
+  right: rem(10px);
+  cursor: pointer;
+
+  @include mobile {
+    top: initial;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: rem(0px);
+  }
+}
+
+.popup__title {
+  margin-bottom: rem(32px);
+  font-size: rem(26px);
+/*   font-family: $p-font-bold; */
+}
+
+
+
+.popup__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: rem(28px);
+  padding: rem(28px);
+  height: 80vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE и Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include mobile {
+    padding: rem(16px);
+  }
+}
+
+.popup__conten-inner {
+  width: 100%;
+  font-family: $p-font-SF-regular;
+
+
+
+  .title {
+    font-family: $p-font-SF-bold;
+    width: max-content;
+    font-size: rem(23px);
+    margin-bottom: rem(22px);
+    text-align: center;
+  }
+  p {
+    font-size: rem(13px);
+    margin-bottom: rem(22px);
+
+    &.pink {
+      color: $p-pink;
+    }
+  }
+
+  img {
+    width: rem(350px);
+    height: auto;
+    margin-bottom: rem(22px);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    &.table {
+      width: 100%;
+      height: auto;
+
+      &.d {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &.m {
+        display: none;
+        @include mobile {
+          display: block;
+        }
+      }
+    }
+
+    @include mobile {
+      width: rem(291px);
+    }
+  }
+
+  h5 {
+    font-family: $p-font-SF-bold;
+    font-size: rem(17px);
+    text-align: left;
+    margin-bottom: rem(22px);
+
+    &.centr {
+      text-align: center;
+    }
+  }
+
+  .block {
+    font-size: rem(13px);
+    padding: rem(12px);
+    border-radius: rem(28px);
+    position: relative;
+    margin-bottom: rem(8px);
+
+    @include mobile {
+      padding: rem(12px) rem(14px);
+      width: calc(rem(244px) - rem(28px));
+    }
+
+    &.pink {
+      border: 2px solid $p-pink;
+      transform: translateX(-20px);
+
+      @include mobile {
+        transform: translateX(0px);
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: rem(26px);
+        height: rem(26px);
+        background-image: url('../../img/popup-arrow-pink.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: rem(-32px);
+      }
+    }
+
+    &.yellow {
+      border: 2px solid #F9BB19;
+      transform: translateX(20px);
+
+      @include mobile {
+        transform: translateX(0px);
+        margin-left: auto;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: rem(26px);
+        height: rem(26px);
+        background-image: url('../../img/popup-arrow-yellow.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: rem(-32px);
+      }
+    }
+
+
+    span {
+      font-family: $p-font-SF-bold;
+    }
+  }
+
+  .data-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(22px);
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .data {
+      text-align: center;
+      font-size: rem(13px);
+      font-family: $p-font-SF-bold;
+      background-color: #F9BB19;
+      border-radius: rem(14px);
+      padding: rem(12px) 0;
+      width: 33%;
+
+      @include mobile {
+        width: 49%;
+        &:last-child {
+          margin-top: rem(4px);
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  ._links-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
+

@@ -20,7 +20,7 @@ export default {
           nav.classList.remove('active');
           body.classList.remove('active');
           enableBodyScroll(targetElement);
-          topOffset = 50;
+          topOffset = 0;
 
           // const topOffset = 0; // если не нужен отступ сверху 
           const elementPosition = scrollTarget.getBoundingClientRect().top;
