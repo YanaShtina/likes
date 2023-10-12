@@ -108,6 +108,7 @@
 
       &._1 {
         top: rem(105px);
+        right: rem(100px);
 
         @include mobile {
           top: rem(200px);
@@ -117,7 +118,7 @@
 
       &._2 {
         top: rem(300px);
-        right: rem(80px);
+        right: rem(30px);
 
         @include mobile {
           top: rem(270px);
@@ -186,7 +187,7 @@
 
   &__img {
     width: rem( 400px);
-    height: rem(835px);
+    height: rem(800px);
     position: relative;
     margin-left: auto;
     margin-right: auto;

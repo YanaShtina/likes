@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 gsap.registerPlugin(ScrollTrigger);
 
+
 export default {
 
   initHero() {
@@ -470,5 +471,44 @@ export default {
       });
     }
 
+  },
+
+  more() {
+    const moreOut = document.querySelectorAll('.out');
+    const moreOut1 = document.querySelector('.inner-wrap-svg');
+
+    const tl = gsap.timeline({
+      repeat: -1,
+    });
+
+    tl.to(moreOut1, {
+      rotate: 360,
+      duration: 3,
+      bezier: {
+        type: "quadratic",
+        values:[
+          /*p1*/{ x: 0, y: 0 }, { x: 200, y: 0 }, { x: 200, y: 200 },
+          /*p2*/{ x: 200, y: 400 }, { x: 0, y: 400 },
+          /*p3*/{ x: -200, y: 400 }, { x: -200, y: 200 },
+          /*p4*/{ x: -200, y: 0 }, { x: 0, y: 0 }],
+        autoRotate: false
+      },
+    }
+    )
+
+
+/*     moreOut.forEach(el => {
+      const tl = gsap.timeline({
+        repeat: -1,
+      });
+
+      tl.to(el, {
+        rotationZ: 10,
+        duration: 3,
+      }
+      )
+    })
+ */
+    console.log('moreOut', moreOut)
   }
 }

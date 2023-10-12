@@ -33,5 +33,21 @@ export default {
         }
       }
     });
+  },
+  initTop() {
+		const swiper = new Swiper('.swiper.top', {
+      modules: [Navigation, Pagination, Autoplay, EffectFade],
+			loop: true,
+			speed: 500,
+			spaceBetween: 12,
+			slidesPerView: 1,
+			direction: 'vertical',
+			allowTouchMove: true,
+      centeredSlides: true, 
+			autoplay: {
+				delay: 2000,
+				disableOnInteraction: false,
+			},
+		})
   }
 }

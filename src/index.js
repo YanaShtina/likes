@@ -15,8 +15,10 @@ counter.init();
 // gsap.initRocket();
 // gsap.scrollCards();
 // gsap.scrollResults();
+gsap.more();
 
 sliders.initReviews();
+sliders.initTop();
 
 
 

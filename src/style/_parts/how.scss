@@ -50,11 +50,12 @@
 
   &__screen-tel {
     width: rem(300px);
-    height: rem(660px);
+    height: rem(600px);
     position: absolute;
     bottom: rem(-180px);
     left: rem(520px);
     z-index: 66;
+    overflow: hidden;
 
     @include mobile {
       width: rem(243px);
@@ -67,7 +68,20 @@
     img {
       height: 100%;
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
+      position: absolute;
+        z-index: 5;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: 2;
+      border-radius: rem(35px);
     }
   }
 
@@ -178,6 +192,14 @@
     font-size: rem(24px);
     border: 2px solid #fff;
     margin-bottom: rem(12px);
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background-color: #FFDCF0;
+      border: 2px solid #FFDCF0;
+      color: #202020;
+      transition: all 0.3s ease-in;
+    }
 
     @include mobile {
       height: rem(44px);

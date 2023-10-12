@@ -138,6 +138,16 @@
     @include mobile {
       display: none;
     }
+
+    &:hover {
+      rect {
+        fill: #1341B2;
+      }
+
+      path {
+        fill:#fff;
+      }
+    }
   }
 
   .swiper-button-next {

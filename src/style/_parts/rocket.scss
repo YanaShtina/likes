@@ -27,6 +27,24 @@
       height: 100%;
       width: 100%;
       object-fit: contain;
+      position: absolute;
+      z-index: 4;
+    }
+    .gif {
+      position: absolute;
+      top: rem(450px);
+      transform: rotate(180deg);
+      width: rem(180px);
+      height: rem(200px);
+      left: rem(65px);
+      z-index: 2;
+
+      @include mobile {
+        top: rem(200px);
+        width: rem(100px);
+        height: rem(100px);
+        left: rem(20px);
+      }
     }
 
     @include mobile {
@@ -141,6 +159,22 @@
       background-repeat: no-repeat;
       background-size: contain;
       margin-bottom: rem(14px);
+
+      &._2 {
+        background-image: url('../../img/rocket-icon-2.svg');
+      }
+
+      &._3 {
+        background-image: url('../../img/rocket-icon-3.svg');
+      }
+
+      &._4 {
+        background-image: url('../../img/rocket-icon-4.svg');
+      }
+
+      &._5 {
+        background-image: url('../../img/rocket-icon-5.svg');
+      }
 
       @include mobile {
         width: rem(24px);

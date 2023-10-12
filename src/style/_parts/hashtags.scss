@@ -4,10 +4,21 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-color: #F5F5FC;
+  position: relative;
 
   @include mobile {
     background-image: none;
   }
+
+  &__bg-bottom {
+    position: absolute;
+    bottom: 0;
+    height: rem(150px);
+    width: 100%;
+    z-index: 55;
+  }
+
+
   
 
   .container {
@@ -112,9 +123,9 @@
     width: rem(227px);
     height: rem(319px);
     position: absolute;
-    right: rem(-130px);
-    bottom: rem(-170px);
-    z-index: -1;
+    right: rem(-110px);
+    bottom: rem(-150px);
+    z-index: 44;
 
     img {
       width: 100%;
