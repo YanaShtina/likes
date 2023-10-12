@@ -1,5 +1,13 @@
 .contacts {
   padding-bottom: rem(48px);
+  padding-top: rem(20px);
+  position: relative;
+  z-index: 55;
+
+  @include mobile {
+    padding-top: rem(20px);
+    background-color: #fff;
+  }
 
   .container {
     display: flex;
@@ -9,17 +17,36 @@
   }
   &__title {
     margin-bottom: rem(24px);
+
+    @include mobile {
+      font-size: rem(32px);
+    }
   }
 
   .social__list {
     align-items: center;
     justify-content: center;
     margin-bottom: rem(70px);
+
+    @include mobile {
+      margin-bottom: rem(18px);
+    }
   }
 
   .social__item {
     width: rem(90px);
     height: rem(90px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mobile {
+      width: rem(36px);
+      height: rem(36px);
+    }
+    
+
   }
 
   .hero__left-links-info {
@@ -31,9 +58,21 @@
       align-items: center;
       flex-direction: column;
       justify-content: center;
+      margin-right: 0;
 
       .font-32-g {
         font-size: rem(60px);
+
+        @include mobile {
+          font-size: rem(32px);
+          text-align: center;
+        }
+      }
+
+      .subtitle {
+        @include mobile {
+          font-size: rem(23px);
+        }
       }
     }
 
@@ -45,6 +84,15 @@
       width: rem(160px);
       height: rem(160px);
       margin-bottom: rem(24px);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include mobile {
+        display: none;
+      }
     }
   }
 

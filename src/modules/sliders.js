@@ -12,15 +12,26 @@ export default {
         el: '.swiper-pagination',
         clickable: true,
       },
-      slidesPerView: 5,
-      spaceBetween: 38,
-      loop: true,
-      /* loopedSlides: 10, */
-      centeredSlides: true, 
-      centeredSlidesBounds: true, 
-      initialSlide: 3,
-      watchSlidesProgress: true,
-      autoHeight: true,
+      spaceBetween: 10,
+      loop: true, 
+      initialSlide: 1,
+      slidesPerView: 1.2,
+   /*    centeredSlides: true,  */
+      freeMode: true,
+      centeredSlidesBounds: true,
+/*       centeredSlidesBounds: true,  */
+
+      breakpoints: {
+        700: {
+          slidesPerView: 3,
+          spaceBetween: 38,
+          initialSlide: 1,
+          centeredSlides: true, 
+          freeMode: true,
+/*           centeredSlidesBounds: true,  */
+          loop: true, 
+        }
+      }
     });
   }
 }
