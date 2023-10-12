@@ -193,10 +193,13 @@
       border-radius: rem(46px);
 
       @include mobile {
-        width: rem(156px);
-        height: rem(323px);
+/*         width: rem(170px);
+        height: rem(350px); */    
+        width: calc(rem(279px) - 30%);
+        height: calc(rem(576px) - 60%);
         bottom: rem(-115px);
-        right:rem(100px);
+        right:rem(95px);
+        border-radius: rem(35px);
       }
 
       video {
@@ -207,6 +210,10 @@
         top: 0;
         border-radius: rem(35px);
         z-index: 2;
+
+        @include mobile {
+          border-radius: rem(20px);
+        }
       }
 
       img {
@@ -224,8 +231,9 @@
       @include mobile {
         width: rem(40px);
         height: rem(35px);
-        left: rem(56px);
+        left: rem(76px);
         top: rem(200px);
+        z-index: 155;
       }
     }
 
@@ -337,6 +345,10 @@
 
   .swiper {
     height: rem(68px);
+
+    @include mobile {
+      height: rem(55px);
+    }
   }
  
   .swiper-slide {
@@ -349,6 +361,9 @@
       padding: rem(12px);
       padding-bottom: 0;
       line-height: 140%;
+      @include mobile {
+        line-height: 150%;
+      }
     }
   }
 }

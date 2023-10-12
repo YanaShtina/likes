@@ -475,40 +475,117 @@ export default {
 
   more() {
     const moreOut = document.querySelectorAll('.out');
-    const moreOut1 = document.querySelector('.inner-wrap-svg');
+    const moreOut1 = document.querySelector('.how__screen-anim');
+    const reason = document.querySelector('.reasons__img .svg');
 
     const tl = gsap.timeline({
       repeat: -1,
     });
 
-    tl.to(moreOut1, {
-      rotate: 360,
-      duration: 3,
-      bezier: {
-        type: "quadratic",
-        values:[
-          /*p1*/{ x: 0, y: 0 }, { x: 200, y: 0 }, { x: 200, y: 200 },
-          /*p2*/{ x: 200, y: 400 }, { x: 0, y: 400 },
-          /*p3*/{ x: -200, y: 400 }, { x: -200, y: 200 },
-          /*p4*/{ x: -200, y: 0 }, { x: 0, y: 0 }],
-        autoRotate: false
-      },
-    }
-    )
+    const tl2 = gsap.timeline({
+      repeat: -1,
+    });
 
-
-/*     moreOut.forEach(el => {
-      const tl = gsap.timeline({
-        repeat: -1,
-      });
-
-      tl.to(el, {
-        rotationZ: 10,
-        duration: 3,
-      }
-      )
+    tl
+    .to(moreOut1, {
+      rotateZ: 360,
+      duration: 8,
     })
- */
-    console.log('moreOut', moreOut)
+    .to(moreOut1, {
+      rotateZ: 0,
+      duration: 8,
+    })
+
+    tl2
+    .to(reason, {
+      rotateZ: 360,
+      duration: 15,
+    })
+    .to(reason, {
+      rotateZ: 0,
+      duration: 15,
+    })
+
+  },
+
+  why() {
+
+    const tl = gsap.timeline({
+      repeat: -1, 
+    })
+
+    tl
+    .to(".reasons__item._l._1", { 
+      backgroundColor: '#F6BE2C',
+      scale:1.2,
+      duration:2,
+    })
+
+    .to(".reasons__item._l._1", { 
+      backgroundColor: '#ffffff',
+      scale:1,
+      duration:2,
+    })
+
+    .to(".reasons__item._r._1", { 
+      backgroundColor: '#F6BE2C',
+      scale:1.2,
+      duration:2,
+    })
+
+    .to(".reasons__item._r._1", { 
+      backgroundColor: '#ffffff',
+      scale:1,
+      duration:2,
+    })
+
+    .to(".reasons__item._l._2", { 
+      backgroundColor: '#F6BE2C',
+      scale:1.2,
+      duration:2,
+    })
+
+    .to(".reasons__item._l._2", { 
+      backgroundColor: '#ffffff',
+      scale:1,
+      duration:2,
+    })
+
+    .to(".reasons__item._r._2", { 
+      backgroundColor: '#F6BE2C',
+      scale:1.2,
+      duration:2,
+    })
+
+
+    .to(".reasons__item._r._2", { 
+      backgroundColor: '#ffffff',
+      scale:1,
+      duration:2,
+    })
+
+    .to(".reasons__item._l._3", { 
+      backgroundColor: '#F6BE2C',
+      scale:1.2,
+      duration:2,
+    })
+    .to(".reasons__item._l._3", { 
+      backgroundColor: '#ffffff',
+      scale:1,
+      duration:2,
+    })
+
+    .to(".reasons__item._r._3", { 
+      backgroundColor: '#F6BE2C',
+      scale:1.2,
+      duration:2,
+    })
+    .to(".reasons__item._r._3", { 
+      backgroundColor: '#ffffff',
+      scale:1,
+      duration:2,
+    })
+
+
   }
 }

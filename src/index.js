@@ -11,11 +11,12 @@ scroll.scroll();
 popup.init();
 burger.init();
 counter.init();
-// gsap.initHero();
-// gsap.initRocket();
-// gsap.scrollCards();
-// gsap.scrollResults();
+gsap.initHero();
+gsap.initRocket();
+gsap.scrollCards();
+gsap.scrollResults();
 gsap.more();
+gsap.why();
 
 sliders.initReviews();
 sliders.initTop();

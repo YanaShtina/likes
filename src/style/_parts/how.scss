@@ -6,6 +6,7 @@
   padding: rem(220px) 0;
   position: relative;
   z-index: 77;
+  overflow-x: hidden;
 
   @include mobile {
     background-image: url('../../img/how-bg-mob.svg');

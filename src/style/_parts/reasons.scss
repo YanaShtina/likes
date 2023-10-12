@@ -6,7 +6,12 @@
   background-size: cover;
   background-position: top;
   position: relative;
-  z-index: 55;
+  z-index: 155;
+  overflow: hidden;
+
+  @include mobile {
+    padding-top: rem(100px);
+  }
 
   .container {
 
@@ -48,6 +53,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+
     @include mobile {
       font-size: rem(16px);
       padding: rem(16px);
@@ -55,8 +61,14 @@
     
 
     &._l {
-      background-image: url('../../img/reason-item-bg-left.svg');
+      background-color: #fff;
       background-position: bottom right;
+      clip-path: polygon(100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 0);
+
+      &::before {
+        content: '';
+      
+      }
 
       @include mobile {
         left:0;
@@ -95,9 +107,10 @@
     }
 
     &._r {
-      background-image: url('../../img/reason-item-bg-rigth.svg');
+      background-color: #fff;
       background-position: bottom left;
       right: 0;
+      clip-path: polygon(100% 0, 100% 100%, 20px 100%, 0 calc(100% - 20px), 0 0);
 
       @include mobile {
         left: 0;

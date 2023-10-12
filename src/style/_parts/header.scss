@@ -54,8 +54,8 @@
       background-color: #F5F5FC;
       top: 0;
       left: 0;
-      z-index: 55;
-      height: calc(100vh - rem(156px));
+      z-index: 255;
+      height: calc(90vh - rem(156px));
       padding-top: rem(108px);
       padding-left: rem(47px);
       padding-right: rem(148px);
@@ -107,7 +107,7 @@
       display: flex;
       border-radius: 100%;
       position: relative;
-      z-index: 100;
+      z-index: 300;
       width: rem(40px);
       height: rem(40px);
       border: none;
@@ -173,7 +173,7 @@
   
       @include mobile {
         background-color: #F6F8FA;
-        z-index: 100;
+        z-index: 300;
       }
       span {
         transition: all 0.3s ease-in;

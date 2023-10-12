@@ -16,6 +16,10 @@
     height: rem(150px);
     width: 100%;
     z-index: 55;
+
+    @include mobile {
+      display: none;
+    }
   }
 
 
