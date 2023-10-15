@@ -93,6 +93,10 @@
         .font-32-g {
           text-transform: uppercase;
 
+          @include mobile {
+            text-align: center;
+          }
+
           ._blue {
             color: $p-blue;
           }
@@ -103,11 +107,20 @@
         }
 
         margin-right: rem(30px);
+
+        @include mobile {
+          margin-right: 0;
+          text-align: center;
+        }
       }
 
       ._links-inner {
         display: flex;
         margin-top: rem(18px);
+
+        @include mobile {
+          justify-content: center;
+        }
       }
     }
 
@@ -360,7 +373,7 @@
       color: #fff;
       padding: rem(12px);
       padding-bottom: 0;
-      line-height: 140%;
+      line-height: 130%;
       @include mobile {
         line-height: 170%;
       }

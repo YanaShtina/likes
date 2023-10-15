@@ -13,6 +13,7 @@ export default {
       if (burger.classList.contains('active')) {
         burger.classList.remove('active');
         body.classList.remove('active');
+
         enableBodyScroll(nav);
       } else {
         burger.classList.add('active');

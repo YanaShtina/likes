@@ -96,7 +96,7 @@
 
       &._3 {
         top: rem(550px);
-        left: rem(50px);
+        left: rem(10px);
 
 
         @include mobile {
@@ -259,6 +259,12 @@
     left: 34%;
     transform: rotate(25deg);
 
+    @include mobile {
+      width: rem(50px);
+      height: rem(40px);
+      left: 36%;
+    }
+
     .like {
       width: rem(22px);
       height: rem(22px);
@@ -267,11 +273,23 @@
       background-size: contain;
       margin-right: rem(4px);
       margin-top: rem(-16px);
+
+      @include mobile {
+        width: rem(15px);
+        height: rem(15px);
+        margin-top: rem(-10px);
+      }
     }
 
     .number {
       color: #fff;
       margin-top: rem(-16px);
+      
+
+      @include mobile {
+        font-size: rem(13px);
+        margin-top: rem(-10px);
+      }
     }
 
   }

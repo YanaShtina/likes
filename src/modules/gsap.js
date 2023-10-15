@@ -400,12 +400,12 @@ export default {
     } else if (mql.matches == true) {
       tlRocket
       .to(rocket, {
-        y: -20,
-        duration: 3,
+        y: -30,
+        duration: 2,
       })
       .to(rocket, {
         y: 0,
-        duration: 3,
+        duration: 2,
       })
 
       rainItems.forEach((rainItem, index) => {

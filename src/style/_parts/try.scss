@@ -8,6 +8,8 @@
 
   @include mobile {
     background: linear-gradient(91deg, #FFDA4E 0%, #F6BE2C 100%), var(--White, #FFF);
+    padding: rem(24px) 0;
+    margin-top: rem(24px);
   }
 
   .container {
