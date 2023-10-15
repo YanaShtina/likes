@@ -450,28 +450,35 @@ export default {
       const title = document.querySelector('.hashtags__list');
       const card2 = document.querySelector('.hashtags__item._2');
       const card3 = document.querySelector('.hashtags__item._3');
+      const card4 = document.querySelector('.hashtags__item._4');
 
       console.log('card3', card3)
 
       const tl = gsap.timeline();
 
       tl.to(card2, {
-        top: 0,
-        duration:3,
+        top: 20,
+        duration:30,
       })
       .to(card3, {
-        top: 0,
-        duration:3,
+        top: 40,
+        duration:30,
+      }) 
+      .to(card4, {
+        top: 30,
+        duration:30,
       }) 
      
       ScrollTrigger.create({
         trigger: section,
-        start: '-50px',
+        start: '-10px',
         end: '2000 top',
         animation: tl,
-       /*  markers: true, */
+        markers: true,
         pin: true,
         scrub: true,
+        duration:100,
+        anticipatePin: 1
       });
     }
   },

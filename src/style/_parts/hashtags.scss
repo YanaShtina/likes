@@ -7,6 +7,11 @@
   position: relative;
 
   @include mobile {
+    padding-top: rem(0px);
+  }
+
+
+  @include mobile {
     background-image: none;
   }
 
@@ -124,6 +129,28 @@
       &._3 {
         top: rem(800px);
         z-index: 10;
+      }
+
+      &._4 {
+        z-index: 15;
+        top: rem(1200px);
+
+        .approved-mob {
+          width: rem(250px);
+          height: rem(80px);
+          object-fit: contain;
+          position: absolute;
+          right: 0;
+        }
+
+        .zuc-mob {
+          width: rem(188px);
+          height: rem(260px);
+          object-fit: contain;
+          position: absolute;
+          left: 0;
+          bottom: rem(-10px);
+        }
       }
     }
   }

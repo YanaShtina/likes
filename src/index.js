@@ -14,8 +14,8 @@ burger.init();
 counter.init();
 /* gsap.initHero();
 gsap.initRocket(); */
-/*gsap.scrollCards();
-gsap.scrollResults();
+gsap.scrollCards();
+/*gsap.scrollResults();
 gsap.more();
 gsap.why(); */
 /* gsap.how(); */
