@@ -13,32 +13,30 @@ export default {
 
     tlDots
      .to('._bg-dots', {
-      rotationZ: -10,
-      duration:3,
-   
+      rotationZ: 360,
+      duration:100,
     }
     )
-   .to('._bg-dots', {
+/*    .to('._bg-dots', {
       rotationZ: 0,
       duration:3,
 
-    }
-    ) 
+    })  */
 
     const tlBG = gsap.timeline({
       repeat: -1,
     });
     tlBG
     .to('._bg-main', {
-      rotationZ: 10,
-      duration:3, 
+     rotationZ: -360,
+      duration:100, 
 
     })
-    .to('._bg-main', {
+ /*    .to('._bg-main', {
       rotationZ: 0,
       duration:3,
 
-    })
+    }) */
     
     // анимация эмоджи 
     const leftItem1 = document.querySelector('._left-1');
@@ -207,6 +205,7 @@ export default {
     let mql = window.matchMedia("(max-width: 700px)");
     const text = gsap.timeline({
       repeat: -1,
+      
     });
 
     // анимация текста 
@@ -233,35 +232,86 @@ export default {
 
     if (mql.matches != true) {
       const tl = gsap.timeline({
-        repeat: -1, // Repeat the animation infinitely
+        repeat: -1,
+        repeatDelay:0.5
       });
+      const duration = 0.2;
       
-      tl.to(".rocket__item._1 .icon, .rocket__item._1 .text", { scale: 1.2 })
-        .to(".rocket__item._1 .arrow", { opacity: 1 })
-        .to(".rocket__item._1 .icon, .rocket__item._1 .text", { scale: 1 })
-        .to(".rocket__item._1 .arrow", { opacity: 0 });
+      tl
+      .to(".rocket__item._1", { background: 'rgba(255, 255, 255, 0.2)',
+      duration:duration, })
+        .to(".rocket__item._1 .icon, .rocket__item._1 .text", 
+        { scale: 1.2,
+          duration:duration,
+        })
+        .to(".rocket__item._1 .arrow", { opacity: 1,
+          duration:duration, })
+        .to(".rocket__item._1 .icon, .rocket__item._1 .text", { scale: 1,
+          duration:duration, })
+        .to(".rocket__item._1 .arrow", { opacity: 0,
+          duration:duration, })
+          .to(".rocket__item._1", { background: 'rgba(255, 255, 255, 0.1)',
+          duration:0, })
+         
 
-        tl.to(".rocket__item._2 .icon, .rocket__item._2 .text", { scale: 1.2 })
-        .to(".rocket__item._2 .arrow", { opacity: 1 })
-        .to(".rocket__item._2 .icon, .rocket__item._2 .text", { scale: 1 })
-        .to(".rocket__item._2 .arrow", { opacity: 0 });
+        tl
+        .to(".rocket__item._2", { background: 'rgba(255, 255, 255, 0.2)',
+        duration:duration, })
+        .to(".rocket__item._2 .icon, .rocket__item._2 .text", { scale: 1.2,
+          duration:duration, })
+        .to(".rocket__item._2 .arrow", { opacity: 1,
+          duration:duration, })
+        .to(".rocket__item._2 .icon, .rocket__item._2 .text", { scale: 1.2,
+          duration:duration, })
+        .to(".rocket__item._2 .arrow", { opacity: 0,
+          duration:duration, })
+          .to(".rocket__item._2", { background: 'rgba(255, 255, 255, 0.1)',
+          duration:0, })
+          
 
-        tl.to(".rocket__item._3 .icon, .rocket__item._3 .text", { scale: 1.2 })
-        .to(".rocket__item._3 .arrow", { opacity: 1 })
-        .to(".rocket__item._3 .icon, .rocket__item._3 .text", { scale: 1 })
-        .to(".rocket__item._3 .arrow", { opacity: 0 });
+        tl
+        .to(".rocket__item._3", { background: 'rgba(255, 255, 255, 0.2)',
+        duration:duration, })
+        .to(".rocket__item._3 .icon, .rocket__item._3 .text", { scale: 1.2,
+          duration:duration, })
+        .to(".rocket__item._3 .arrow", { opacity: 1,
+          duration:duration, })
+        .to(".rocket__item._3 .icon, .rocket__item._3 .text", { scale: 1,
+          duration:duration, })
+        .to(".rocket__item._3 .arrow", { opacity: 0,
+          duration:duration, })
+          .to(".rocket__item._3", { background: 'rgba(255, 255, 255, 0.1)',
+          duration:0, })
 
 
-        tl.to(".rocket__item._4 .icon, .rocket__item._4 .text", { scale: 1.2 })
-        .to(".rocket__item._4 .arrow", { opacity: 1 })
-        .to(".rocket__item._4 .icon, .rocket__item._4 .text", { scale: 1 })
-        .to(".rocket__item._4 .arrow", { opacity: 0 });
+        tl
+        .to(".rocket__item._4", { background: 'rgba(255, 255, 255, 0.2)',
+        duration:duration, })
+        .to(".rocket__item._4 .icon, .rocket__item._4 .text", { scale: 1.2,
+          duration:duration, })
+        .to(".rocket__item._4 .arrow", { opacity: 1,
+          duration:duration, })
+        .to(".rocket__item._4 .icon, .rocket__item._4 .text", { scale: 1,
+        duration:duration, })
+        .to(".rocket__item._4 .arrow", { opacity: 0,
+        duration:duration, })
+        .to(".rocket__item._4", { background: 'rgba(255, 255, 255, 0.1)',
+        duration:0, })
 
 
-        tl.to(".rocket__item._5 .icon, .rocket__item._5 .text", { scale: 1.2 })
-        .to(".rocket__item._5 .arrow", { opacity: 1 })
-        .to(".rocket__item._5 .icon, .rocket__item._5 .text", { scale: 1 })
-        .to(".rocket__item._5 .arrow", { opacity: 0 });
+        tl
+        .to(".rocket__item._5", { background: 'rgba(255, 255, 255, 0.2)',
+        duration:duration, })
+        .to(".rocket__item._5 .icon, .rocket__item._5 .text", { scale: 1.2,
+        duration:duration, })
+        .to(".rocket__item._5 .arrow", { opacity: 1,
+        duration:duration, })
+        .to(".rocket__item._5 .icon, .rocket__item._5 .text", { scale: 1,
+        duration:duration, })
+        .to(".rocket__item._5 .arrow", { opacity: 0,
+        duration:duration, })
+        .to(".rocket__item._5", { background: 'rgba(255, 255, 255, 0.1)',
+        duration:0, })
     } else if (mql.matches == true) {
       const tl = gsap.timeline({
         repeat: -1, // Repeat the animation infinitely
@@ -313,15 +363,15 @@ export default {
     if (mql.matches != true) {
       tlRocket
       .to(rocket, {
-        y: -90,
+        y: -70,
     /*     opacity:0.4, */
-        duration: 1,
+        duration: 2,
    
       })
       .to(rocket, {
       /*   opacity:1, */
         y: 0,
-        duration: 1,
+        duration: 2,
    
       })
 
@@ -351,11 +401,11 @@ export default {
       tlRocket
       .to(rocket, {
         y: -20,
-        duration: 5,
+        duration: 3,
       })
       .to(rocket, {
         y: 0,
-        duration: 5,
+        duration: 3,
       })
 
       rainItems.forEach((rainItem, index) => {
@@ -588,5 +638,29 @@ export default {
     })
 
 
+  },
+
+
+  how() {
+    const bg = document.querySelector('.how__bg-anim');
+    let mql = window.matchMedia("(max-width: 700px)");
+    console.log('mql', mql.matches);
+ 
+    if(mql.matches != true) {
+      const tl = gsap.timeline({
+        repeat: -1, 
+      })
+  
+      tl
+      .to(bg, { 
+        translateX: '-60%',
+        duration:15,
+      })
+      .to(bg, { 
+        translateX: '155%',
+        duration:15,
+        })
+    }
+    
   }
 }

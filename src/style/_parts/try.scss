@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 88;
+  z-index: 188;
 
   @include mobile {
     background: linear-gradient(91deg, #FFDA4E 0%, #F6BE2C 100%), var(--White, #FFF);
@@ -49,5 +49,26 @@
 
   ._links-inner {
     display: flex;
+  }
+
+  .link-apple {
+    width: rem(158px);
+    height: rem(53px);
+
+    @include mobile {
+      width: rem(120px);
+      height: rem(40px);
+    }
+  }
+
+  .link-google {
+    width: rem(178px);
+    height: rem(53px);
+
+
+    @include mobile {
+      width: rem(135px);
+      height: rem(40px);
+    }
   }
 }

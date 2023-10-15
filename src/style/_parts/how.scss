@@ -10,7 +10,7 @@
 
   @include mobile {
     background-image: url('../../img/how-bg-mob.svg');
-    padding: rem(70px) 0;
+    padding: rem(80px) 0;
   }
 
   .container {
@@ -42,12 +42,50 @@
     }
   }
 
-/*   &__screen {
+  &__bg-anim {
     position: absolute;
+    height: rem(800px);
+    width: rem(800px);
+    transform: translateX(155%);
+    top: rem(-15px);
+    z-index: -1;
+    opacity: 0.3;
+    background-color: #d9b1dc;
+    border-radius: 100%;
+ /*    background: radial-gradient(50% 50% at 50% 50%, #2457A3 0%, rgba(142, 36, 163, 0.00) 100%); */
+    filter: blur(90.5px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+  }
+
+  &__screen-shadow {
+    width: rem(310px);
+    height: rem(15px);
+    position: absolute;
+    bottom: 0;
+    z-index: 66;
     left: 50%;
     transform: translateX(-50%);
-    bottom: rem(-200px);
-  } */
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include mobile {
+      width: rem(230px);
+      height: rem(15px);
+      bottom: rem(200px);
+    }
+  }
+
 
   &__screen-tel {
     width: rem(300px);
@@ -108,12 +146,16 @@
     }
   }
 
+
+
   &__list {
     max-width: rem(375px);
     padding-left: rem(20px);
+    transform: translateY(rem(30px));
 
     @include mobile {
       margin-bottom: rem(560px);
+      transform: translateY(0);
     }
   }
 
@@ -174,6 +216,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translateY(rem(30px));
+
+    @include mobile {
+      transform: translateY(rem(20px));
+    }
   }
 
   &__more-title {

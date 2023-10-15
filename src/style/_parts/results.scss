@@ -1,5 +1,5 @@
 .results {
-  padding: rem(10px) rem(0px);
+  padding: rem(100px) rem(0px);
   background-image: url('../../img/exeples-bg.png');
   background-position: bottom;
   background-repeat: no-repeat;
@@ -8,6 +8,7 @@
   z-index: 100;
 
   @include mobile {
+    padding: rem(10px) rem(0px);
     background-image: none;
     height: rem(700px);
   }

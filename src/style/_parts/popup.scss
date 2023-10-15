@@ -105,6 +105,7 @@ backdrop-filter: blur(7px);
   p {
     font-size: rem(13px);
     margin-bottom: rem(22px);
+    text-align: center;
 
     &.pink {
       color: $p-pink;
@@ -147,6 +148,7 @@ backdrop-filter: blur(7px);
     font-size: rem(17px);
     text-align: left;
     margin-bottom: rem(22px);
+    text-align: center;
 
     &.centr {
       text-align: center;
