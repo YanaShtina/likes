@@ -205,7 +205,6 @@ export default {
   initRocket() {
     // если тру - значит мобилка
     let mql = window.matchMedia("(max-width: 700px)");
-    console.log('mql', mql.matches)
     const text = gsap.timeline({
       repeat: -1,
     });
@@ -314,13 +313,15 @@ export default {
     if (mql.matches != true) {
       tlRocket
       .to(rocket, {
-        y: -70,
-        opacity:0.4,
+        y: -90,
+    /*     opacity:0.4, */
+        duration: 1,
    
       })
       .to(rocket, {
-        opacity:1,
+      /*   opacity:1, */
         y: 0,
+        duration: 1,
    
       })
 
@@ -350,11 +351,11 @@ export default {
       tlRocket
       .to(rocket, {
         y: -20,
-        duration: 2,
+        duration: 5,
       })
       .to(rocket, {
         y: 0,
-        duration: 2,
+        duration: 5,
       })
 
       rainItems.forEach((rainItem, index) => {
@@ -418,7 +419,7 @@ export default {
         start: '-50px',
         end: '2000 top',
         animation: tl,
-        markers: true,
+       /*  markers: true, */
         pin: true,
         scrub: true,
       });
@@ -465,7 +466,7 @@ export default {
         start: '-50px',
         end: '1500 top',
         animation: tl,
-        markers: true,
+       /*  markers: true, */
         pin: true,
         scrub: true,
       });

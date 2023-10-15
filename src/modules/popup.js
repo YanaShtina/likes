@@ -43,9 +43,7 @@ export default {
           }
 
 
-          if (type !== 'policy') {
-            disableBodyScroll(targetElement);
-          } 
+
           
           let closePopupButton = popupBg.querySelector('.close-popup');
 

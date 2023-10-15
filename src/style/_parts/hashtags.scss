@@ -17,6 +17,10 @@
     width: 100%;
     z-index: 55;
 
+    img {
+      width: 100%;
+    }
+
     @include mobile {
       display: none;
     }
