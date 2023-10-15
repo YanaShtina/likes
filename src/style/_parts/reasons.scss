@@ -48,7 +48,7 @@
     top: 0;
     font-family: $p-font-SF-bold;
     font-size: rem(24px);
-    padding: rem(24px);
+    padding: rem(32px);
     width: max-content;
     background-repeat: no-repeat;
     background-size: cover;
@@ -141,7 +141,7 @@
 
       &._3 {
         top: rem(500px);
-        right: rem(10px);
+        right: rem(-10px);
 
         @include mobile {
           top: rem(340px);

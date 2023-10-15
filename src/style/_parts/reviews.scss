@@ -3,7 +3,7 @@
   margin-bottom: rem(40px);
   position: relative;
   z-index: 155;
-  background-color: #F5F5FC;
+  background-color: #f5f5fc;
   overflow-x: hidden;
 
   @include mobile {
@@ -30,30 +30,80 @@
       text-transform: uppercase;
     }
   }
-
   &__slider {
     height: rem(600px);
     width: rem(1100px);
 
     @include mobile {
-      width: 100%;
+      width: rem(231px);
+      overflow: visible;
+
     }
 
 
 
   }
 
-  .swiper-wrapper {
-/*     width: rem(1186px); */
-  }
-
   .slider__item {
-/*     width: rem(170px) !important;
-    height: rem(412px) !important; */
+    /*     width: rem(170px) !important;
+        height: rem(412px) !important; */
+    position: relative;
 
     @include mobile {
-     /*  width: 76% !important; */
+      width: rem(231px) !important;
       height: rem(558px) !important;
+    }
+
+    .decor-left-1 {
+      height: rem(19px);
+      width: rem(6px);
+      border-radius: 2px;
+      background-color: #fff;
+      position: absolute;
+      left: rem(-3px);
+      top: rem(71px);
+    }
+
+    .decor-left-2 {
+      height: rem(47px);
+      width: rem(6px);
+      border-radius: 2px;
+      background-color: #fff;
+      position: absolute;
+      left: rem(-3px);
+      top: rem(104px);
+    }
+
+    .decor-left-3{
+      height: rem(47px);
+      width: rem(6px);
+      border-radius: 2px;
+      background-color: #fff;
+      position: absolute;
+      left: rem(-3px);
+      top: rem(157px);
+    }
+
+    .decor-bottom {
+      position: absolute;
+      width: rem(79px);
+      height: rem(3px);
+      background-color: #fff;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: rem(110px);
+      border-radius: 3px;
+      z-index: 55;
+    }
+
+    .decor-right {
+      height: rem(77px);
+      width: rem(6px);
+      border-radius: 2px;
+      background-color: #fff;
+      position: absolute;
+      right: rem(-12px);
+      top: rem(127px);
     }
   }
 
@@ -67,7 +117,7 @@
   .slider__item-info {
     color: #818196;
     font-size: 13px;
-        text-align: center;
+    text-align: center;
   }
   .slider__item-video {
     width: 100%;
@@ -76,6 +126,7 @@
     border: 5px solid #fff;
     overflow: hidden;
     margin-bottom: rem(25px);
+    position: relative;
 
     @include mobile {
       width: auto;
@@ -90,7 +141,6 @@
   }
 
   .swiper-slide-active {
-
     .slider__item-video {
       height: rem(495px) !important;
       transition: all 0.3s ease-in;
@@ -99,11 +149,10 @@
         width: auto;
         height: rem(490px) !important;
       }
-     
     }
   }
 
-  .swiper-slide-next{
+  .swiper-slide-next {
     .slider__item-video {
       height: rem(415px) !important;
 
@@ -112,11 +161,17 @@
         height: rem(490px) !important;
       }
     }
-   
+
+    .decor-bottom {
+
+      bottom: rem(190px);
+
+    }
+
+
   }
 
   .swiper-slide-prev {
-
     .slider__item-video {
       height: rem(415px) !important;
 
@@ -124,6 +179,12 @@
         width: auto;
         height: rem(490px) !important;
       }
+    }
+
+    .decor-bottom {
+
+      bottom: rem(190px);
+
     }
   }
 
@@ -137,26 +198,38 @@
     }
 
     @include mobile {
-      display: none;
+     /*  display: none; */
+
+     width: rem(45px);
+     height: rem(45px);
+     top: 93%;
     }
 
     &:hover {
       rect {
-        fill: #1341B2;
+        fill: #1341b2;
       }
 
       path {
-        fill:#fff;
+        fill: #fff;
       }
     }
   }
 
   .swiper-button-next {
     right: rem(40px);
+
+    @include mobile {
+      right: 35%;
+    }
   }
 
   .swiper-button-prev {
     left: rem(40px);
+
+    @include mobile {
+      left: 35%;
+    }
   }
 
   .swiper-pagination {
@@ -174,12 +247,12 @@
       .swiper-pagination-bullet {
         width: 18px;
         height: 18px;
-        background-color: #AFAFD3;
+        background-color: #afafd3;
       }
 
       .swiper-pagination-bullet-active {
         background-color: transparent;
-        border: 3px solid #1341B2;
+        border: 3px solid #1341b2;
       }
     }
   }

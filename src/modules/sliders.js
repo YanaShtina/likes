@@ -12,24 +12,23 @@ export default {
         el: '.swiper-pagination',
         clickable: true,
       },
-      spaceBetween: 10,
-      loop: true, 
-      initialSlide: 1,
-      slidesPerView: 1.2,
-   /*    centeredSlides: true,  */
-      freeMode: true,
-      centeredSlidesBounds: true,
-/*       centeredSlidesBounds: true,  */
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+      initialSlide: 3,
+
+
 
       breakpoints: {
-        700: {
-          slidesPerView: 3,
-          spaceBetween: 38,
-          initialSlide: 1,
-          centeredSlides: true, 
-          freeMode: true,
+        700: {     
+          slidesPerView: 4,
+          spaceBetween: 30,
+          centeredSlides: true,
+          initialSlide: 3,
+
+   /*        freeMode: true, */
 /*           centeredSlidesBounds: true,  */
-          loop: true, 
+    /*       loop: true,  */
         }
       }
     });
