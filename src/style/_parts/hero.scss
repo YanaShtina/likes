@@ -1,5 +1,5 @@
 .hero {
-  margin-top: rem(95px);
+  margin-top: rem(250px);
 
   @include mobile {
     overflow-x: hidden;
@@ -171,6 +171,7 @@
       height: rem(520px);
       right: rem(-20px);
       bottom: rem(0);
+      z-index: 1;
 
       @include mobile {
         width: 110%;
@@ -186,6 +187,7 @@
       height: rem(560px);
       right: rem(-42px);
       bottom: rem(-22px);
+
 
 
       @include mobile {
@@ -204,6 +206,7 @@
       right:rem(180px);
       overflow: hidden;
       border-radius: rem(46px);
+      z-index: 5;
 
       @include mobile {
 /*         width: rem(170px);
@@ -240,6 +243,7 @@
       height: rem(65px);
       top: rem(20px);
       left: rem(200px);
+      z-index: 5;
 
       @include mobile {
         width: rem(40px);
@@ -255,6 +259,7 @@
       height: rem(100px);
       top: rem(150px);
       left: rem(115px);
+      z-index: 5;
 
        
       @include mobile {
@@ -270,6 +275,7 @@
       height: rem(160px);
       bottom: rem(40px);
       left: rem(90px);
+      z-index: 5;
 
       @include mobile {
         width: rem(80px);
@@ -316,6 +322,7 @@
       height: rem(62px);
       right: rem(65px);
       top: rem(80px);
+      z-index: 5;
 
       @include mobile {
         width: rem(45px);
@@ -330,6 +337,7 @@
       height: rem(160px);
       right: rem(-90px);
       top: rem(160px);
+      z-index: 5;
 
 
       @include mobile {

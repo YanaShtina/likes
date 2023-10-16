@@ -32,5 +32,24 @@ export default {
           });
       });
     })
+
+
+const header = document.querySelector('.header');
+
+const headerHeight = header.offsetHeight;
+console.log('headerHeight', headerHeight);
+
+window.addEventListener('scroll', () => {
+
+  const scrollY = window.scrollY;
+  const hideThreshold = 0.2 * headerHeight;
+
+  if (scrollY > hideThreshold) {
+    header.classList.add('active');
+  } else {
+    header.classList.remove('active');
+  }
+}); 
+
   },
 }

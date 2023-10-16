@@ -16,22 +16,47 @@ export default {
       spaceBetween: 30,
       centeredSlides: true,
       initialSlide: 3,
-
-
-
       breakpoints: {
         700: {     
-          slidesPerView: 4,
-          spaceBetween: 30,
+          slidesPerView: 5,
+          spaceBetween: 28,
           centeredSlides: true,
           initialSlide: 3,
-
-   /*        freeMode: true, */
-/*           centeredSlidesBounds: true,  */
-    /*       loop: true,  */
         }
       }
     });
+
+
+
+
+
+   swiper.on('click', function (e) {
+    const clickedIndex = swiper.clickedIndex;
+    swiper.slideTo(clickedIndex);
+
+    const clickedSlide = swiper.clickedSlide;
+
+   const videos = document.querySelectorAll('video');
+    videos.forEach((v) => {
+      const clisedV = clickedSlide.querySelector('video')
+      if(v.paused != true) {
+        v.pause();
+      } else {
+      }
+    })
+
+    const videInner = clickedSlide.querySelector('video');
+   
+    clickedSlide.addEventListener('click', () => {
+      if(videInner.paused != true) {
+        videInner.pause();
+      } else {
+        videInner.play();
+      }
+    })
+    videInner.play();
+}); 
+ 
   },
   initTop() {
 		const swiper = new Swiper('.swiper.top', {

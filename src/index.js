@@ -11,14 +11,14 @@ import counter  from './modules/counter';
 scroll.scroll();
 popup.init();
 burger.init();
-counter.init();
+/* counter.init();
 gsap.initHero();
 gsap.initRocket(); 
 gsap.scrollCards();
 gsap.scrollResults();
 gsap.more();
 gsap.why(); 
-gsap.how(); 
+gsap.how();  */
 sliders.initReviews();
 sliders.initTop();
 
