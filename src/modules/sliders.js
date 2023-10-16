@@ -27,34 +27,26 @@ export default {
     });
 
 
-
-
-
    swiper.on('click', function (e) {
     const clickedIndex = swiper.clickedIndex;
     swiper.slideTo(clickedIndex);
-
+    
     const clickedSlide = swiper.clickedSlide;
-
-   const videos = document.querySelectorAll('video');
+    const videInner = clickedSlide.querySelector('video');
+    console.log('click1')
+/*     const videos = document.querySelectorAll('video');
     videos.forEach((v) => {
-      const clisedV = clickedSlide.querySelector('video')
       if(v.paused != true) {
         v.pause();
-      } else {
       }
-    })
-
-    const videInner = clickedSlide.querySelector('video');
-   
-    clickedSlide.addEventListener('click', () => {
-      if(videInner.paused != true) {
-        videInner.pause();
-      } else {
-        videInner.play();
-      }
-    })
-    videInner.play();
+    }) 
+ */
+    if(clickedSlide.classList.contains('swiper-slide-active')) {
+      videInner.play();
+    } else {
+      videInner.pause();
+    }
+    console.log('click2')
 }); 
  
   },

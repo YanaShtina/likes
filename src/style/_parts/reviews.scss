@@ -60,12 +60,22 @@
   }
 
   .slider__item {
-/*      width: rem(180px) !important; */
-        /*    height: rem(412px) !important; */
     position: relative;
- /*    margin-left: rem(14px);
-    margin-right: rem(14px); */
- /*    margin-left: rem(-2px); */
+
+    &.pause {
+      &::before {
+        content: '';
+        position: absolute;
+        width: rem(40px);
+        height: rem(40px);
+        top: rem(200px);
+        right: rem(100px);
+        background-color: red;
+        z-index: 3;
+      }
+
+    } 
+
 
     @include mobile {
       width: rem(231px) !important;
