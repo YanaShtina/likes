@@ -4,7 +4,7 @@
   position: relative;
   z-index: 155;
   background-color: #f5f5fc;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @include mobile {
     padding-bottom: rem(35px);
@@ -62,19 +62,7 @@
   .slider__item {
     position: relative;
 
-    &.pause {
-      &::before {
-        content: '';
-        position: absolute;
-        width: rem(40px);
-        height: rem(40px);
-        top: rem(200px);
-        right: rem(100px);
-        background-color: red;
-        z-index: 3;
-      }
 
-    } 
 
 
     @include mobile {
@@ -164,6 +152,23 @@
     margin-bottom: rem(25px);
     position: relative;
 
+    &.pause {
+      &::before {
+        content: '';
+        position: absolute;
+        width: rem(50px);
+        height: rem(50px);
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        background-image: url('../../img/play-img.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 3;
+      }
+
+    } 
+
     @include mobile {
       width: auto;
       height: rem(490px) !important;
@@ -187,7 +192,7 @@
 
       @include mobile {
         width: auto;
-        height: rem(450px) !important;
+        height: rem(490px) !important;
       }
     }
 
