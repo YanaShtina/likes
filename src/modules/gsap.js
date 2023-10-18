@@ -597,13 +597,13 @@ export default {
         scale:1,
         duration:2,
       })
-    } else {
+    } else if (mql.matches == true) {
           const tl = gsap.timeline({
       repeat: -1, 
     })
 
     tl
-    .to(".reasons__item._l._1", { 
+     .to(".reasons__item._l._1", { 
       backgroundColor: '#F6BE2C',
       scale:1.2,
       duration:2,
@@ -613,7 +613,7 @@ export default {
       backgroundColor: '#ffffff',
       scale:1,
       duration:2,
-    })
+    }) 
 
     .to(".reasons__item._l._2", { 
       backgroundColor: '#F6BE2C',
@@ -625,7 +625,7 @@ export default {
       backgroundColor: '#ffffff',
       scale:1,
       duration:2,
-    })
+    }) 
 
     .to(".reasons__item._l._3", { 
       backgroundColor: '#F6BE2C',
@@ -637,7 +637,7 @@ export default {
       backgroundColor: '#ffffff',
       scale:1,
       duration:2,
-    })
+    }) 
 
     .to(".reasons__item._r._1", { 
       backgroundColor: '#F6BE2C',
