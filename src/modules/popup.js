@@ -20,8 +20,6 @@ export default {
       || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
     }
 
-    console.log('isApple', isApple())
-
     openPopupButtons.forEach((button) => { 
       button.addEventListener('click', (e) => { 
           e.preventDefault();
@@ -55,7 +53,6 @@ export default {
 
 
           closePopupButton.addEventListener('click',() => { 
-           //  console.log('closePopupButton');
             popupBg.classList.remove('active'); 
             popup.classList.remove('active'); 
             enableBodyScroll(targetElement);

@@ -169,6 +169,8 @@
       padding: rem(4px) rem(8px);
       line-height: 120%;
       padding-top: rem(12px);
+      margin-top: rem(3px);
+      display: inline-block;
     }
     @include mobile {
       display: none;

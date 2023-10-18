@@ -109,10 +109,13 @@
         color: #202020;
         line-height: 120%;
         padding-top: rem(16px);
+        margin-top: rem(3px);
+        display: inline-block;
 
         @include mobile {
           padding: rem(4px) rem(8px);
           padding-top: rem(6px);
+          margin-top: rem(0px);
         }
       }
 

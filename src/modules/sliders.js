@@ -15,15 +15,15 @@ export default {
       slidesPerView: 1,
       spaceBetween: 30,
       centeredSlides: true,
-      initialSlide: 13,
-    /*   loop: true, */
+      initialSlide: 17,
+      loop: false, 
       breakpoints: {
         700: {     
           slidesPerView: 5,
           spaceBetween: 28,
           centeredSlides: true,
-          initialSlide: 3,
-         /*  loop: true, */
+          initialSlide: 13,
+          loop: true,
         }
       }
     });

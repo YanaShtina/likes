@@ -319,7 +319,7 @@ export default {
     const rocket = document.querySelector('.rocket__img');
 
     const tlRocket = gsap.timeline({
-      repeat: -1, // Repeat the animation infinitely
+      repeat: -1, 
     });
 
     const rainItems = document.querySelectorAll(".rain-item-svg");
@@ -330,12 +330,12 @@ export default {
       tlRocket
       .to(rocket, {
         y: -70,
-    /*     opacity:0.4, */
+  
         duration: 2,
    
       })
       .to(rocket, {
-      /*   opacity:1, */
+   
         y: 0,
         duration: 2,
    
@@ -359,15 +359,13 @@ export default {
             duration: 2,
             delay: index * 0.1,
           })
-     /*      .set(rainItem, { y: "-120%" });
-      
-        tlRain.add(tlItem, 0); // Ensure that each item starts at the same time */
       });
     } else if (mql.matches == true) {
       tlRocket
       .to(rocket, {
         y: -30,
         duration: 2,
+        
       })
       .to(rocket, {
         y: 0,
@@ -394,9 +392,6 @@ export default {
             duration: 2,
             delay: index * 0.1,
           })
-     /*      .set(rainItem, { y: "-120%" });
-      
-        tlRain.add(tlItem, 0); // Ensure that each item starts at the same time */
       });
     }
 
@@ -423,27 +418,26 @@ export default {
 
       tl.to(card2, {
         top: 20,
-        duration:30,
+        duration:1,
       })
       .to(card3, {
         top: 40,
-        duration:30,
+        duration:1,
       }) 
       .to(card4, {
         top: 30,
-        duration:30,
+        duration:1,
       }) 
      
       ScrollTrigger.create({
         trigger: section,
         start: '-80px',
-        end: '2400 top',
+        end: '5000',
         animation: tl,
-        markers: true,
+     /*    markers: true, */
         pin: true,
         scrub: true,
-        duration:100,
-        anticipatePin: 1
+
       });
     }
   },
