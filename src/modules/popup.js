@@ -37,9 +37,18 @@ export default {
           popupBg.classList.add('active'); 
           popup.classList.add('active'); 
 
-          if(isApple != true) {
+          let mql = window.matchMedia("(max-width: 700px)");
+          if (mql.matches != true) {
             disableBodyScroll(targetElement);
+          } else {
+            enableBodyScroll(targetElement);
           }
+
+    /*       if(isApple != true) {
+            disableBodyScroll(targetElement);
+          } else {
+            enableBodyScroll(targetElement);
+          } */
 
 
           let closePopupButton = popupBg.querySelector('.close-popup');

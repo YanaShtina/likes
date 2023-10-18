@@ -124,6 +124,10 @@
       position: absolute;
       right: rem(-4px);
       top: rem(127px);
+
+      @include mobile {
+        right: rem(4px);
+      }
     }
   }
 

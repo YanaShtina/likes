@@ -3,7 +3,7 @@
 
   @include mobile {
     overflow-x: hidden;
-    margin-top: rem(15px);
+    margin-top: rem(80px);
     margin-bottom: rem(30px);
     position: relative;
 
@@ -218,7 +218,7 @@
         width: calc(rem(279px) - 30%);
         height: calc(rem(576px) - 60%);
         bottom: rem(-155px);
-        right:rem(95px);
+        right:rem(90px);
         border-radius: rem(35px);
       }
 
@@ -391,4 +391,38 @@
       }
     }
   }
+
+  .font-32-sf-wrap {
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .font-32-sf {
+      margin-bottom: rem(4px);
+    }
+
+  }
+  .font-32-sf._blue._arrow {
+    margin-bottom: 0;
+  }
+
+    @include mobile {
+
+      .font-32-sf {
+ 
+          margin-bottom: rem(4px);
+
+      }
+      .font-32-sf._blue._arrow {
+        padding: rem(12px);
+        margin-bottom: 0;
+      }
+    }
+  
+  
+
+
 }

@@ -264,7 +264,7 @@ body {
 .m {
   display: none !important;
   @include mobile {
-    display: block;
+    display: block !important;
   }
 }
 

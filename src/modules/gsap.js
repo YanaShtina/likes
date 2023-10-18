@@ -278,95 +278,6 @@ export default {
           }).repeat(-1).delay((5 * duration) + (i * duration) + duration).repeatDelay(5)
         }
 
-      /*.to(".rocket__item._1 .icon, .rocket__item._1 .text", { 
-        scale: 1,
-        duration:duration, 
-    
-      })
-      .to(".rocket__item._1", { 
-        background: 'rgba(255, 255, 255, 0.1)',
-        duration:duration ,
-    
-      })
-      .to(".rocket__item._1 .arrow", { 
-        opacity: 0,
-        duration:0.1 ,
-   
-        })*/
-    
-        
-/*       tl
-      .to(".rocket__item._2", { background: 'rgba(255, 255, 255, 0.2)',
-      duration:duration, })
-      .to(".rocket__item._2 .arrow", { opacity: 1,
-        duration:duration,
-        delay:0.3,
-       })
-      .to(".rocket__item._2 .icon, .rocket__item._2 .text", { 
-        scale: 1.2,
-        duration:duration,
-        delay:delay,  })
-      
-      .to(".rocket__item._2 .icon, .rocket__item._2 .text", { scale: 1,
-        duration:duration, })
-      
-      .to(".rocket__item._2", { background: 'rgba(255, 255, 255, 0.1)',
-        duration:duration })
-      .to(".rocket__item._2 .arrow", { 
-        opacity: 0,
-        duration:0.2, 
-      }) */
-          
-/* 
-      tl
-      .to(".rocket__item._3", { background: 'rgba(255, 255, 255, 0.2)',
-      duration:duration, })
-      .to(".rocket__item._3 .arrow", { opacity: 1,
-        duration:duration, })
-      .to(".rocket__item._3 .icon, .rocket__item._3 .text", { scale: 1.2,
-        duration:duration, })
-      .to(".rocket__item._3 .icon, .rocket__item._3 .text", { scale: 1,
-        duration:duration, })
-      .to(".rocket__item._3", { background: 'rgba(255, 255, 255, 0.1)',
-        duration:duration })
-      .to(".rocket__item._3 .arrow", { opacity: 0,
-          duration:duration, }) */
-
-
-/*         tl
-  
-        .to(".rocket__item._4", { background: 'rgba(255, 255, 255, 0.2)',
-        duration:duration, })
-        .to(".rocket__item._4 .arrow", { opacity: 1,
-          duration:duration, })
-        .to(".rocket__item._4 .icon, .rocket__item._4 .text", { scale: 1.2,
-          duration:duration, })
-        
-        .to(".rocket__item._4 .icon, .rocket__item._4 .text", { scale: 1,
-        duration:duration, })
-       
-        .to(".rocket__item._4", { background: 'rgba(255, 255, 255, 0.1)',
-        duration:duration })
-        .to(".rocket__item._4 .arrow", { opacity: 0,
-          duration:duration, }) */
-
-/* 
-        tl
-
-        .to(".rocket__item._5", { background: 'rgba(255, 255, 255, 0.2)',
-        duration:duration, })
-        .to(".rocket__item._5 .arrow", { opacity: 1,
-          duration:duration, })
-        .to(".rocket__item._5 .icon, .rocket__item._5 .text", { scale: 1.2,
-        duration:duration, })
-      
-        .to(".rocket__item._5 .icon, .rocket__item._5 .text", { scale: 1,
-        duration:duration, })
-    
-        .to(".rocket__item._5", { background: 'rgba(255, 255, 255, 0.1)',
-        duration:duration })
-        .to(".rocket__item._5 .arrow", { opacity: 0,
-          duration:duration, }) */
     } else if (mql.matches == true) {
       const tl = gsap.timeline({
         repeat: -1, // Repeat the animation infinitely
@@ -528,7 +439,7 @@ export default {
         start: '-80px',
         end: '2400 top',
         animation: tl,
-      /*   markers: true, */
+        markers: true,
         pin: true,
         scrub: true,
         duration:100,

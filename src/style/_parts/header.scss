@@ -101,8 +101,15 @@
     &__links {
       @include mobile {
    margin-top: auto;
+   display: flex !important;
+   flex-direction: column;
       }
-
+      .link-apple {
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: rem(12px);
+        }
+      }
     }
  
   }
