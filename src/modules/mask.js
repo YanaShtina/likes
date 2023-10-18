@@ -4,7 +4,7 @@ export default {
   init() {
     const masks = document.querySelectorAll('.js-tel');
     if (!masks) return;
-    console.log('')
+    
 
     let complited = false;
 
@@ -22,8 +22,6 @@ export default {
 
       if (!isBook) {
         const mask = IMask(m, maskOptions);
-        console.log('mask.masked.isComplete', mask.masked.isComplete);
-
         m.addEventListener('blur', () => {
 
           if (mask.masked.isComplete === false && mask.masked.rawInputValue.length > 0) {

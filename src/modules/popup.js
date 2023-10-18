@@ -20,7 +20,7 @@ export default {
       || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
     }
 
-    // console.log('isApple', isApple())
+    console.log('isApple', isApple())
 
     openPopupButtons.forEach((button) => { 
       button.addEventListener('click', (e) => { 
@@ -37,14 +37,11 @@ export default {
           popupBg.classList.add('active'); 
           popup.classList.add('active'); 
 
-          const popupTitle = popup.querySelector('.popup__title'); 
-          if (title) {
-            popupTitle.textContent = `Получите подборку ${title}`;
+          if(isApple != true) {
+            disableBodyScroll(targetElement);
           }
 
 
-
-          
           let closePopupButton = popupBg.querySelector('.close-popup');
 
 

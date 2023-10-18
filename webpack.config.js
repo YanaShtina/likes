@@ -35,6 +35,7 @@ module.exports = {
     filename: '[name].js',
     assetModuleFilename: 'assets/[name][ext]',
   },
+
   resolve: {
     extensions: ['.Webpack.js', '.web.js', '.ts', '.js', '.tsx']
   },
@@ -55,6 +56,9 @@ module.exports = {
           to: 'assets',
           noErrorOnMissing: true,
         },
+
+
+
       ],
     }),
   ],
@@ -63,16 +67,10 @@ module.exports = {
     rules: [
       {
         test: /\.html$|njk|nunjucks/,
-        // loader: 'html-loader',
         use: ['html-loader',{
           loader: 'nunjucks-html-loader',
           options : {
-             // Other super important. This will be the base
-             // directory in which webpack is going to find 
-             // the layout and any other file index.njk is calling.
              searchPaths: [...returnEntries('./src/templates/**/')]
-             // Use the one below if you want to use a single path.
-             // searchPaths: ['./client/templates'],
           }
         }]
       },
@@ -113,7 +111,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpg|jpg|png|webp|gif|svg)$/i,
+        test: /\.(jpg|jpg|png|webp|gif|svg|json)$/i,
         use: devMode
           ? []
           : [
@@ -151,6 +149,10 @@ module.exports = {
           },
         },
       },
+/*       {                                                                        
+        test: /\.json$/,                                                       
+        loader: 'file-loader?name=[name].json'                                 
+     } */
     ],
   },
 

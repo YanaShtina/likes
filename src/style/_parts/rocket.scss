@@ -10,6 +10,30 @@
     background-image: url('../../img/rocket-bg-mob.svg');
     padding: rem(65px) 0;
     margin-bottom: rem(50px);
+    background-position: top;
+    position: relative;
+    z-index: -1;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: rem(20px);
+      background-color: #F5F5FC;
+      position: absolute;
+      bottom: rem(-10px);
+      left: 0;
+      z-index: 5;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: rem(-6px);
+      width: 100%;
+      height: rem(10px);
+      background-color: #F5F5FC;
+      z-index: 5;
+    }
   }
  
 

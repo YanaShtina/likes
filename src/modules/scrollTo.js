@@ -20,9 +20,29 @@ export default {
           nav.classList.remove('active');
           body.classList.remove('active');
           enableBodyScroll(targetElement);
-          topOffset = 0;
+      
+        if (scrollTarget.classList.contains('hero')) {
+            topOffset = 180;
+          }  else if (scrollTarget.classList.contains('rocket')) {
+            let mql = window.matchMedia("(max-width: 700px)");
+            if(mql.matches != true) {
+              topOffset = -70;
+            } else {
+              topOffset = 70;
+            }
+            
+          }  
+          else if (scrollTarget.classList.contains('how')) {
+            topOffset = 60; 
+          } 
+          else if (scrollTarget.classList.contains('results')) {
+            topOffset = 0;
+          } 
+          else {
+            topOffset = 100;
+          }
+       
 
-          // const topOffset = 0; // если не нужен отступ сверху 
           const elementPosition = scrollTarget.getBoundingClientRect().top;
           const offsetPosition = elementPosition - topOffset;
 
@@ -37,7 +57,7 @@ export default {
 const header = document.querySelector('.header');
 
 const headerHeight = header.offsetHeight;
-console.log('headerHeight', headerHeight);
+
 
 window.addEventListener('scroll', () => {
 

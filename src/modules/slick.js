@@ -1,6 +1,6 @@
 export default {
   init() {
-    console.log('ffbfbfdvd');
+  
     $('.swiper').slick({
       centerMode: true,
       centerPadding: '160px',

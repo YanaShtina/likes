@@ -49,18 +49,12 @@ export default {
       if(slide != null && slide.classList.contains('swiper-slide-active') && v.paused == true) {
         vid.classList.remove('pause')
         v.play();
-        console.log('click1', v.played, v.paused);
+   
       } else if (slide != null && slide.classList.contains('swiper-slide-active') && v.paused == false) {
         vid.classList.add('pause')
         v.pause();
-        console.log('click3', v.played, v.paused);
+   
       }
-
- /*      if(slide != null && slide.classList.contains('swiper-slide-active') && v.paused == false) {
-        v.pause();
-        console.log('click3', v.played, v.paused);
-      }  */
-      
     }) 
   
   
@@ -86,11 +80,9 @@ export default {
           if(slide != null && slide.classList.contains('swiper-slide-active') && v.paused == true) {
             vid.classList.remove('pause')
             v.play();
-            console.log('click1', v.played, v.paused);
           } else if (slide != null && slide.classList.contains('swiper-slide-active') && v.paused == false) {
             vid.classList.add('pause')
             v.pause();
-            console.log('click3', v.played, v.paused);
           }
           
         }) 

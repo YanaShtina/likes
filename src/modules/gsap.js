@@ -233,44 +233,91 @@ export default {
     if (mql.matches != true) {
       const tl = gsap.timeline({
         repeat: -1,
-        repeatDelay:3,
+        repeatDelay:2,
       });
-      const duration = 0.5;
-      
-      tl
-      .to(".rocket__item._1", { background: 'rgba(255, 255, 255, 0.2)',
-      duration:duration, })
-      .to(".rocket__item._1 .arrow", { opacity: 1,
-        duration:0.5 })
-      .to(".rocket__item._1 .icon, .rocket__item._1 .text", 
-      { scale: 1.2,
-        duration:duration,
+      const duration = 0.4;
+/*       const delay = 0.1; */
+
+        for (let i = 0; i < 5; i++) {
+          const itemNumber = i + 1;
+
+          gsap.to(`.rocket__item._${itemNumber}`, { 
+            background: 'rgba(255, 255, 255, 0.2)',
+            duration:duration
+          }).repeat(-1).delay((5 * duration) + (i * duration)).repeatDelay(5)
+  
+          gsap.to(`.rocket__item._${itemNumber}`, { 
+            background: 'rgba(255, 255, 255, 0.1)',
+            duration:duration
+          }).repeat(-1).delay((5 * duration) + (i * duration) + duration).repeatDelay(5)
+  
+
+
+          gsap.to(`.rocket__item._${itemNumber} .icon, .rocket__item._${itemNumber} .text`, 
+          { 
+            scale: 1.2,
+            duration:duration
+          }).repeat(-1).delay((5 * duration) + (i * duration)).repeatDelay(5)
+          
+          gsap.to(`.rocket__item._${itemNumber} .icon, .rocket__item._${itemNumber} .text`, 
+          { 
+            scale: 1,
+            duration:duration
+          }).repeat(-1).delay((5 * duration) + (i * duration) + duration).repeatDelay(5)
+
+
+  
+          gsap.to(`.rocket__item._${itemNumber} .arrow`, { 
+            opacity: 1,
+            duration:duration
+          }).repeat(-1).delay((5 * duration) + (i * duration)).repeatDelay(5)
+  
+          gsap.to(`.rocket__item._${itemNumber} .arrow`, { 
+            opacity: 0,
+            duration:duration
+          }).repeat(-1).delay((5 * duration) + (i * duration) + duration).repeatDelay(5)
+        }
+
+      /*.to(".rocket__item._1 .icon, .rocket__item._1 .text", { 
+        scale: 1,
+        duration:duration, 
+    
       })
-      .to(".rocket__item._1 .icon, .rocket__item._1 .text", { scale: 1,
-        duration:duration, })
-      .to(".rocket__item._1", { background: 'rgba(255, 255, 255, 0.1)',
-        duration:duration })
-      .to(".rocket__item._1 .arrow", { opacity: 0,
-          duration:duration })
+      .to(".rocket__item._1", { 
+        background: 'rgba(255, 255, 255, 0.1)',
+        duration:duration ,
+    
+      })
+      .to(".rocket__item._1 .arrow", { 
+        opacity: 0,
+        duration:0.1 ,
+   
+        })*/
     
         
-      tl
+/*       tl
       .to(".rocket__item._2", { background: 'rgba(255, 255, 255, 0.2)',
       duration:duration, })
       .to(".rocket__item._2 .arrow", { opacity: 1,
-        duration:duration, })
-      .to(".rocket__item._2 .icon, .rocket__item._2 .text", { scale: 1.2,
-        duration:duration, })
+        duration:duration,
+        delay:0.3,
+       })
+      .to(".rocket__item._2 .icon, .rocket__item._2 .text", { 
+        scale: 1.2,
+        duration:duration,
+        delay:delay,  })
       
       .to(".rocket__item._2 .icon, .rocket__item._2 .text", { scale: 1,
         duration:duration, })
       
       .to(".rocket__item._2", { background: 'rgba(255, 255, 255, 0.1)',
         duration:duration })
-      .to(".rocket__item._2 .arrow", { opacity: 0,
-          duration:duration, })
+      .to(".rocket__item._2 .arrow", { 
+        opacity: 0,
+        duration:0.2, 
+      }) */
           
-
+/* 
       tl
       .to(".rocket__item._3", { background: 'rgba(255, 255, 255, 0.2)',
       duration:duration, })
@@ -283,10 +330,10 @@ export default {
       .to(".rocket__item._3", { background: 'rgba(255, 255, 255, 0.1)',
         duration:duration })
       .to(".rocket__item._3 .arrow", { opacity: 0,
-          duration:duration, })
+          duration:duration, }) */
 
 
-        tl
+/*         tl
   
         .to(".rocket__item._4", { background: 'rgba(255, 255, 255, 0.2)',
         duration:duration, })
@@ -301,9 +348,9 @@ export default {
         .to(".rocket__item._4", { background: 'rgba(255, 255, 255, 0.1)',
         duration:duration })
         .to(".rocket__item._4 .arrow", { opacity: 0,
-          duration:duration, })
+          duration:duration, }) */
 
-
+/* 
         tl
 
         .to(".rocket__item._5", { background: 'rgba(255, 255, 255, 0.2)',
@@ -319,7 +366,7 @@ export default {
         .to(".rocket__item._5", { background: 'rgba(255, 255, 255, 0.1)',
         duration:duration })
         .to(".rocket__item._5 .arrow", { opacity: 0,
-          duration:duration, })
+          duration:duration, }) */
     } else if (mql.matches == true) {
       const tl = gsap.timeline({
         repeat: -1, // Repeat the animation infinitely
@@ -449,10 +496,9 @@ export default {
 
   scrollCards() {
     let mql = window.matchMedia("(max-width: 700px)");
-    console.log('mql', mql.matches);
 
     if (mql.matches != true) {
-      console.log('desk')
+      
     } else if (mql.matches == true) {
       const section = document.querySelector('.hashtags');
       const title = document.querySelector('.hashtags__list');
@@ -460,7 +506,7 @@ export default {
       const card3 = document.querySelector('.hashtags__item._3');
       const card4 = document.querySelector('.hashtags__item._4');
 
-      console.log('card3', card3)
+
 
       const tl = gsap.timeline();
 
@@ -479,10 +525,10 @@ export default {
      
       ScrollTrigger.create({
         trigger: section,
-        start: '-10px',
-        end: '2000 top',
+        start: '-80px',
+        end: '2400 top',
         animation: tl,
-        markers: true,
+      /*   markers: true, */
         pin: true,
         scrub: true,
         duration:100,
@@ -494,10 +540,10 @@ export default {
   scrollResults() {
 
     let mql = window.matchMedia("(max-width: 700px)");
-    console.log('mql', mql.matches);
+   
 
     if (mql.matches != true) {
-      console.log('desk')
+   
     } else if (mql.matches == true) {
       const section = document.querySelector('.results');
       const scroll1 = document.querySelector('.scroll-1');
@@ -517,21 +563,13 @@ export default {
         top: 0,
         duration:3,
       }) 
-      .to(scroll4, {
-        top: 0,
-        duration:3,
-      }) 
-      .to(scroll5, {
-        top: 0,
-        duration:3,
-      }) 
      
       ScrollTrigger.create({
         trigger: section,
         start: '-50px',
-        end: '1500 top',
+        end: '1000 top',
         animation: tl,
-       /*  markers: true, */
+     /*    markers: true, */
         pin: true,
         scrub: true,
       });
@@ -576,7 +614,86 @@ export default {
 
   why() {
 
-    const tl = gsap.timeline({
+    let mql = window.matchMedia("(max-width: 700px)");
+
+    if (mql.matches != true) {
+      const tl = gsap.timeline({
+        repeat: -1, 
+      })
+  
+      tl
+      .to(".reasons__item._l._1", { 
+        backgroundColor: '#F6BE2C',
+        scale:1.2,
+        duration:2,
+      })
+  
+      .to(".reasons__item._l._1", { 
+        backgroundColor: '#ffffff',
+        scale:1,
+        duration:2,
+      })
+  
+      .to(".reasons__item._r._1", { 
+        backgroundColor: '#F6BE2C',
+        scale:1.2,
+        duration:2,
+      })
+  
+      .to(".reasons__item._r._1", { 
+        backgroundColor: '#ffffff',
+        scale:1,
+        duration:2,
+      })
+  
+      .to(".reasons__item._l._2", { 
+        backgroundColor: '#F6BE2C',
+        scale:1.2,
+        duration:2,
+      })
+  
+      .to(".reasons__item._l._2", { 
+        backgroundColor: '#ffffff',
+        scale:1,
+        duration:2,
+      })
+  
+      .to(".reasons__item._r._2", { 
+        backgroundColor: '#F6BE2C',
+        scale:1.2,
+        duration:2,
+      })
+  
+  
+      .to(".reasons__item._r._2", { 
+        backgroundColor: '#ffffff',
+        scale:1,
+        duration:2,
+      })
+  
+      .to(".reasons__item._l._3", { 
+        backgroundColor: '#F6BE2C',
+        scale:1.2,
+        duration:2,
+      })
+      .to(".reasons__item._l._3", { 
+        backgroundColor: '#ffffff',
+        scale:1,
+        duration:2,
+      })
+  
+      .to(".reasons__item._r._3", { 
+        backgroundColor: '#F6BE2C',
+        scale:1.2,
+        duration:2,
+      })
+      .to(".reasons__item._r._3", { 
+        backgroundColor: '#ffffff',
+        scale:1,
+        duration:2,
+      })
+    } else {
+          const tl = gsap.timeline({
       repeat: -1, 
     })
 
@@ -593,18 +710,6 @@ export default {
       duration:2,
     })
 
-    .to(".reasons__item._r._1", { 
-      backgroundColor: '#F6BE2C',
-      scale:1.2,
-      duration:2,
-    })
-
-    .to(".reasons__item._r._1", { 
-      backgroundColor: '#ffffff',
-      scale:1,
-      duration:2,
-    })
-
     .to(".reasons__item._l._2", { 
       backgroundColor: '#F6BE2C',
       scale:1.2,
@@ -617,25 +722,37 @@ export default {
       duration:2,
     })
 
-    .to(".reasons__item._r._2", { 
+    .to(".reasons__item._l._3", { 
       backgroundColor: '#F6BE2C',
       scale:1.2,
       duration:2,
     })
 
-
-    .to(".reasons__item._r._2", { 
+    .to(".reasons__item._l._3", { 
       backgroundColor: '#ffffff',
       scale:1,
       duration:2,
     })
 
-    .to(".reasons__item._l._3", { 
+    .to(".reasons__item._r._1", { 
       backgroundColor: '#F6BE2C',
       scale:1.2,
       duration:2,
     })
-    .to(".reasons__item._l._3", { 
+
+    .to(".reasons__item._r._1", { 
+      backgroundColor: '#ffffff',
+      scale:1,
+      duration:2,
+    })
+
+    .to(".reasons__item._r._2", { 
+      backgroundColor: '#F6BE2C',
+      scale:1.2,
+      duration:2,
+    })
+
+    .to(".reasons__item._r._2", { 
       backgroundColor: '#ffffff',
       scale:1,
       duration:2,
@@ -646,11 +763,16 @@ export default {
       scale:1.2,
       duration:2,
     })
+
     .to(".reasons__item._r._3", { 
       backgroundColor: '#ffffff',
       scale:1,
       duration:2,
     })
+
+    }
+
+
 
 
   },
@@ -659,7 +781,7 @@ export default {
   how() {
     const bg = document.querySelector('.how__bg-anim');
     let mql = window.matchMedia("(max-width: 700px)");
-    console.log('mql', mql.matches);
+   
  
     if(mql.matches != true) {
       const tl = gsap.timeline({

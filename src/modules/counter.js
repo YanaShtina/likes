@@ -15,7 +15,5 @@ export default {
 
       const numberSpan = document.querySelector('.number');
       startCounter(numberSpan, 50); // Передайте нужную скорость (в миллисекундах)
-
-    console.log('dd', span);
   }
 }

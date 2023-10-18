@@ -26,6 +26,7 @@
 
     @include mobile {
       bottom: rem(-10px);
+      left: rem(-10px);
     }
 
     img {
@@ -116,6 +117,7 @@
         left: 0;
         right: initial;
         background-image: url('../../img/reason-item-bg-left.svg');
+        clip-path: polygon(100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 0);
       }
 
 

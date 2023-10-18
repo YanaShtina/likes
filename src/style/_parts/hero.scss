@@ -4,6 +4,10 @@
   @include mobile {
     overflow-x: hidden;
     margin-top: rem(15px);
+    margin-bottom: rem(30px);
+    position: relative;
+
+
   }
 
 
@@ -177,7 +181,7 @@
         width: 110%;
         height: rem(300px);
         right: rem(-10px);
-        top: rem(270px);
+        top: rem(280px);
         bottom: initial;
       }
     }
@@ -194,7 +198,7 @@
         width: 125%;
         height: rem(325px);
         right: rem(-30px);
-        top: rem(260px);
+        top: rem(270px);
         bottom: initial;
       }
     }
@@ -213,7 +217,7 @@
         height: rem(350px); */    
         width: calc(rem(279px) - 30%);
         height: calc(rem(576px) - 60%);
-        bottom: rem(-115px);
+        bottom: rem(-155px);
         right:rem(95px);
         border-radius: rem(35px);
       }
